@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)file:///C:/Users/Andres/Downloads/index_3.html#quote -->
+<!-- saved from url=(0046)file:///C:/Users/Andres/Downloads/index_4.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -254,6 +254,10 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
 .fbot a:hover{color:var(--white)}
 .fbot-links{display:flex;gap:1.5rem}
 
+/* STARS */
+.star{transition:all 0.15s ease;display:inline-block;color:var(--gray);line-height:1}
+.star:hover,.star.on{color:var(--gold);transform:scale(1.15)}
+
 /* ANIMS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -279,9 +283,9 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
 <body>
 
 <!-- NAV -->
-<nav id="nav" class="">
+<nav id="nav">
   <div class="nav-inner">
-    <a href="file:///C:/Users/Andres/Downloads/index_3.html#" class="nav-logo">
+    <a href="file:///C:/Users/Andres/Downloads/index_4.html#" class="nav-logo">
       <div class="logo-mark">🌊</div>
       <div class="logo-words">
         <div class="l1">FL Coastal Insurance</div>
@@ -289,29 +293,29 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
       </div>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li id="dd1" class="">
+      <li id="dd1">
         <button onclick="toggleDD(&#39;dd1&#39;)">Coverage <span class="chevron">▾</span></button>
         <div class="dropdown">
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#services"><span class="d-icon">🏠</span><span><span class="d-title">Homeowners</span><span class="d-sub">HO-3, HO-6, high-value homes</span></span></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#services"><span class="d-icon">🌊</span><span><span class="d-title">Flood Insurance</span><span class="d-sub">NFIP &amp; private flood options</span></span></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#services"><span class="d-icon">🌀</span><span><span class="d-title">Wind &amp; Hurricane</span><span class="d-sub">Coastal &amp; high-wind specialists</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#services"><span class="d-icon">🏠</span><span><span class="d-title">Homeowners</span><span class="d-sub">HO-3, HO-6, high-value homes</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#services"><span class="d-icon">🌊</span><span><span class="d-title">Flood Insurance</span><span class="d-sub">NFIP &amp; private flood options</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#services"><span class="d-icon">🌀</span><span><span class="d-title">Wind &amp; Hurricane</span><span class="d-sub">Coastal &amp; high-wind specialists</span></span></a>
           <div class="dd-div"></div>
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#services"><span class="d-icon">🏢</span><span><span class="d-title">Commercial</span><span class="d-sub">BOP, liability, property</span></span></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#services"><span class="d-icon">🏗️</span><span><span class="d-title">Rental / Landlord</span><span class="d-sub">DP-1, DP-3, investment</span></span></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#services"><span class="d-icon">🏖️</span><span><span class="d-title">Condo (HO-6)</span><span class="d-sub">Unit owners &amp; associations</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#services"><span class="d-icon">🏢</span><span><span class="d-title">Commercial</span><span class="d-sub">BOP, liability, property</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#services"><span class="d-icon">🏗️</span><span><span class="d-title">Rental / Landlord</span><span class="d-sub">DP-1, DP-3, investment</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#services"><span class="d-icon">🏖️</span><span><span class="d-title">Condo (HO-6)</span><span class="d-sub">Unit owners &amp; associations</span></span></a>
         </div>
       </li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#why">Why Us</a></li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#coverage">Service Area</a></li>
-      <li id="dd2" class="">
+      <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#why">Why Us</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#coverage">Service Area</a></li>
+      <li id="dd2">
         <button onclick="toggleDD(&#39;dd2&#39;)">Partners <span class="chevron">▾</span></button>
         <div class="dropdown">
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#why"><span class="d-icon">🏡</span><span><span class="d-title">Realtors</span><span class="d-sub">Fast binders for closings</span></span></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_3.html#why"><span class="d-icon">🏦</span><span><span class="d-title">Mortgage Officers</span><span class="d-sub">Lender-ready documentation</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#why"><span class="d-icon">🏡</span><span><span class="d-title">Realtors</span><span class="d-sub">Fast binders for closings</span></span></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_4.html#why"><span class="d-icon">🏦</span><span><span class="d-title">Mortgage Officers</span><span class="d-sub">Lender-ready documentation</span></span></a>
         </div>
       </li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#faq">FAQ</a></li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="nav-cta">Get Free Quote →</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#faq">FAQ</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="nav-cta">Get Free Quote →</a></li>
     </ul>
     <button class="hamburger" id="hbtn" onclick="toggleMobile()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -321,26 +325,26 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
 
 <!-- MOBILE MENU -->
 <div id="mmenu">
-  <a href="file:///C:/Users/Andres/Downloads/index_3.html#services" class="mob-item" onclick="closeMobile()">Coverage</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_3.html#why" class="mob-item" onclick="closeMobile()">Why Us</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_3.html#coverage" class="mob-item" onclick="closeMobile()">Service Area</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_3.html#faq" class="mob-item" onclick="closeMobile()">FAQ</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_4.html#services" class="mob-item" onclick="mobNav(&#39;#services&#39;)">Coverage</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_4.html#why" class="mob-item" onclick="mobNav(&#39;#why&#39;)">Why Us</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_4.html#coverage" class="mob-item" onclick="mobNav(&#39;#coverage&#39;)">Service Area</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_4.html#faq" class="mob-item" onclick="mobNav(&#39;#faq&#39;)">FAQ</a>
   <a href="tel:+17542851953" class="mob-item" onclick="closeMobile()">📞 (754) 285-1953</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="mob-cta-btn" onclick="closeMobile()">Get Free Quote →</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="mob-cta-btn" onclick="mobNav(&#39;#quote&#39;)">Get Free Quote →</a>
 </div>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="particles" id="pts"><div class="pt" style="width: 4.62107px; height: 4.62107px; left: 87.4637%; background: rgba(201, 168, 76, 0.25); animation-duration: 19.3715s; animation-delay: -4.53754s;"></div><div class="pt" style="width: 3.28497px; height: 3.28497px; left: 95.1431%; background: rgba(201, 168, 76, 0.25); animation-duration: 11.208s; animation-delay: -1.08503s;"></div><div class="pt" style="width: 3.8103px; height: 3.8103px; left: 63.3107%; background: rgba(201, 168, 76, 0.25); animation-duration: 14.7994s; animation-delay: -2.20369s;"></div><div class="pt" style="width: 5.61316px; height: 5.61316px; left: 7.97451%; background: rgba(23, 168, 196, 0.35); animation-duration: 19.1772s; animation-delay: -4.01397s;"></div><div class="pt" style="width: 3.09667px; height: 3.09667px; left: 54.528%; background: rgba(201, 168, 76, 0.25); animation-duration: 13.6098s; animation-delay: -16.4203s;"></div><div class="pt" style="width: 4.30632px; height: 4.30632px; left: 4.6889%; background: rgba(23, 168, 196, 0.35); animation-duration: 17.6693s; animation-delay: -12.6614s;"></div><div class="pt" style="width: 3.69415px; height: 3.69415px; left: 62.5169%; background: rgba(201, 168, 76, 0.25); animation-duration: 14.4674s; animation-delay: -3.92409s;"></div><div class="pt" style="width: 3.26069px; height: 3.26069px; left: 4.69013%; background: rgba(23, 168, 196, 0.35); animation-duration: 19.0632s; animation-delay: -6.35613s;"></div><div class="pt" style="width: 5.01315px; height: 5.01315px; left: 33.6074%; background: rgba(23, 168, 196, 0.35); animation-duration: 8.13957s; animation-delay: -14.0801s;"></div><div class="pt" style="width: 4.66997px; height: 4.66997px; left: 91.7954%; background: rgba(201, 168, 76, 0.25); animation-duration: 13.6126s; animation-delay: -14.4703s;"></div><div class="pt" style="width: 2.67924px; height: 2.67924px; left: 59.966%; background: rgba(201, 168, 76, 0.25); animation-duration: 18.4489s; animation-delay: -8.57425s;"></div><div class="pt" style="width: 2.48903px; height: 2.48903px; left: 92.5422%; background: rgba(201, 168, 76, 0.25); animation-duration: 12.0621s; animation-delay: -2.21669s;"></div><div class="pt" style="width: 5.55252px; height: 5.55252px; left: 3.64476%; background: rgba(201, 168, 76, 0.25); animation-duration: 9.50083s; animation-delay: -16.8396s;"></div><div class="pt" style="width: 4.53416px; height: 4.53416px; left: 40.3377%; background: rgba(201, 168, 76, 0.25); animation-duration: 19.0605s; animation-delay: -13.8618s;"></div><div class="pt" style="width: 5.93728px; height: 5.93728px; left: 0.76839%; background: rgba(23, 168, 196, 0.35); animation-duration: 9.98854s; animation-delay: -7.15406s;"></div><div class="pt" style="width: 4.48373px; height: 4.48373px; left: 58.9577%; background: rgba(201, 168, 76, 0.25); animation-duration: 10.9984s; animation-delay: -0.76633s;"></div><div class="pt" style="width: 3.66458px; height: 3.66458px; left: 49.3045%; background: rgba(201, 168, 76, 0.25); animation-duration: 14.7219s; animation-delay: -5.69997s;"></div><div class="pt" style="width: 2.58722px; height: 2.58722px; left: 56.2736%; background: rgba(201, 168, 76, 0.25); animation-duration: 15.373s; animation-delay: -12.5186s;"></div><div class="pt" style="width: 2.52086px; height: 2.52086px; left: 94.1968%; background: rgba(23, 168, 196, 0.35); animation-duration: 16.9803s; animation-delay: -12.1352s;"></div><div class="pt" style="width: 3.55864px; height: 3.55864px; left: 82.8859%; background: rgba(201, 168, 76, 0.25); animation-duration: 21.9051s; animation-delay: -4.92716s;"></div></div>
+  <div class="particles" id="pts"><div class="pt" style="width: 4.23085px; height: 4.23085px; left: 29.0712%; background: rgba(23, 168, 196, 0.35); animation-duration: 20.4444s; animation-delay: -0.180439s;"></div><div class="pt" style="width: 3.10578px; height: 3.10578px; left: 16.0523%; background: rgba(23, 168, 196, 0.35); animation-duration: 10.0411s; animation-delay: -15.6065s;"></div><div class="pt" style="width: 5.15971px; height: 5.15971px; left: 0.477743%; background: rgba(23, 168, 196, 0.35); animation-duration: 8.45433s; animation-delay: -7.79283s;"></div><div class="pt" style="width: 2.20179px; height: 2.20179px; left: 55.2212%; background: rgba(23, 168, 196, 0.35); animation-duration: 17.4097s; animation-delay: -16.5948s;"></div><div class="pt" style="width: 5.62552px; height: 5.62552px; left: 23.1795%; background: rgba(201, 168, 76, 0.25); animation-duration: 8.67203s; animation-delay: -18.6941s;"></div><div class="pt" style="width: 4.29938px; height: 4.29938px; left: 45.4903%; background: rgba(201, 168, 76, 0.25); animation-duration: 16.5479s; animation-delay: -12.193s;"></div><div class="pt" style="width: 4.59668px; height: 4.59668px; left: 35.0064%; background: rgba(201, 168, 76, 0.25); animation-duration: 15.0054s; animation-delay: -9.48503s;"></div><div class="pt" style="width: 5.96678px; height: 5.96678px; left: 55.6662%; background: rgba(23, 168, 196, 0.35); animation-duration: 13.6101s; animation-delay: -0.316784s;"></div><div class="pt" style="width: 4.18586px; height: 4.18586px; left: 80.0929%; background: rgba(201, 168, 76, 0.25); animation-duration: 13.899s; animation-delay: -2.0371s;"></div><div class="pt" style="width: 3.04363px; height: 3.04363px; left: 88.8957%; background: rgba(23, 168, 196, 0.35); animation-duration: 21.5655s; animation-delay: -3.69476s;"></div><div class="pt" style="width: 5.67975px; height: 5.67975px; left: 92.9548%; background: rgba(23, 168, 196, 0.35); animation-duration: 16.3905s; animation-delay: -12.586s;"></div><div class="pt" style="width: 5.45036px; height: 5.45036px; left: 66.796%; background: rgba(23, 168, 196, 0.35); animation-duration: 8.95388s; animation-delay: -2.61762s;"></div><div class="pt" style="width: 3.32815px; height: 3.32815px; left: 11.525%; background: rgba(201, 168, 76, 0.25); animation-duration: 14.3408s; animation-delay: -10.4732s;"></div><div class="pt" style="width: 2.72095px; height: 2.72095px; left: 64.723%; background: rgba(201, 168, 76, 0.25); animation-duration: 13.0139s; animation-delay: -2.63834s;"></div><div class="pt" style="width: 2.0384px; height: 2.0384px; left: 98.6941%; background: rgba(23, 168, 196, 0.35); animation-duration: 18.934s; animation-delay: -10.8843s;"></div><div class="pt" style="width: 2.17905px; height: 2.17905px; left: 15.099%; background: rgba(201, 168, 76, 0.25); animation-duration: 18.5653s; animation-delay: -12.0909s;"></div><div class="pt" style="width: 4.47455px; height: 4.47455px; left: 42.0889%; background: rgba(23, 168, 196, 0.35); animation-duration: 21.2153s; animation-delay: -8.38742s;"></div><div class="pt" style="width: 3.60017px; height: 3.60017px; left: 42.7921%; background: rgba(23, 168, 196, 0.35); animation-duration: 20.7702s; animation-delay: -18.7344s;"></div><div class="pt" style="width: 3.57135px; height: 3.57135px; left: 10.1762%; background: rgba(201, 168, 76, 0.25); animation-duration: 15.3601s; animation-delay: -6.18846s;"></div><div class="pt" style="width: 3.21937px; height: 3.21937px; left: 43.3825%; background: rgba(23, 168, 196, 0.35); animation-duration: 18.0296s; animation-delay: -12.5262s;"></div></div>
   <div class="hero-inner">
     <div>
       <div class="hero-badge">⚓ Florida's Independent Insurance Specialists</div>
       <h1 class="hero-h1">Shop <span class="aq">30+ Carriers.</span><br>One <span class="gd">Trusted Agent.</span><br>All of Florida.</h1>
       <p class="hero-sub">We do the heavy lifting — comparing dozens of top carriers to find you the best coverage at the lowest rate. Homeowners, flood, wind, commercial. All 65 Florida counties (except Manatee).</p>
       <div class="hero-btns">
-        <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="btn-gold">Get My Free Quote →</a>
+        <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="btn-gold">Get My Free Quote →</a>
         <a href="tel:+17542851953" class="btn-outline">📞 (754) 285-1953</a>
       </div>
       <div class="hero-stats">
@@ -380,12 +384,12 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
     <h2 class="sec-title">Complete Florida Coverage</h2>
     <p class="sec-sub">From beachfront condos to inland commercial properties — we place coverage others can't.</p>
     <div class="svc-grid">
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="svc-card reveal vis"><span class="svc-em">🏠</span><h3>Homeowners Insurance</h3><p>HO-3, HO-6, standard and high-value homes. We specialize in quoting luxury properties and find coverage in difficult coastal zones where others give up.</p><div class="svc-arr">Get a Quote →</div></a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="svc-card reveal vis"><span class="svc-em">🌊</span><h3>Flood Insurance</h3><p>NFIP and private flood options. We compare to find the best rate for your flood zone — often saving clients thousands over the standard NFIP policy.</p><div class="svc-arr">Get a Quote →</div></a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="svc-card reveal vis"><span class="svc-em">🌀</span><h3>Wind &amp; Hurricane</h3><p>Dedicated wind-only policies, Citizens alternatives, and wind mitigation credits. We keep coastal Floridians covered at fair prices.</p><div class="svc-arr">Get a Quote →</div></a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="svc-card reveal vis"><span class="svc-em">🏢</span><h3>Commercial Insurance</h3><p>BOP, general liability, commercial property, workers' comp. Full commercial lines for Florida businesses of all sizes and industries.</p><div class="svc-arr">Get a Quote →</div></a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="svc-card reveal vis"><span class="svc-em">🏗️</span><h3>Landlord &amp; Rental Property</h3><p>DP-1, DP-3, and landlord liability policies for investment properties, vacation rentals, and multi-family units throughout Florida.</p><div class="svc-arr">Get a Quote →</div></a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="svc-card reveal vis"><span class="svc-em">🏖️</span><h3>Condo Insurance (HO-6)</h3><p>Interior unit coverage, loss assessment, and personal liability for Florida condo owners. Best rates across carriers who specialize in Florida's condo market.</p><div class="svc-arr">Get a Quote →</div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="svc-card reveal"><span class="svc-em">🏠</span><h3>Homeowners Insurance</h3><p>HO-3, HO-6, standard and high-value homes. We specialize in quoting luxury properties and find coverage in difficult coastal zones where others give up.</p><div class="svc-arr">Get a Quote →</div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="svc-card reveal"><span class="svc-em">🌊</span><h3>Flood Insurance</h3><p>NFIP and private flood options. We compare to find the best rate for your flood zone — often saving clients thousands over the standard NFIP policy.</p><div class="svc-arr">Get a Quote →</div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="svc-card reveal"><span class="svc-em">🌀</span><h3>Wind &amp; Hurricane</h3><p>Dedicated wind-only policies, Citizens alternatives, and wind mitigation credits. We keep coastal Floridians covered at fair prices.</p><div class="svc-arr">Get a Quote →</div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="svc-card reveal"><span class="svc-em">🏢</span><h3>Commercial Insurance</h3><p>BOP, general liability, commercial property, workers' comp. Full commercial lines for Florida businesses of all sizes and industries.</p><div class="svc-arr">Get a Quote →</div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="svc-card reveal"><span class="svc-em">🏗️</span><h3>Landlord &amp; Rental Property</h3><p>DP-1, DP-3, and landlord liability policies for investment properties, vacation rentals, and multi-family units throughout Florida.</p><div class="svc-arr">Get a Quote →</div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="svc-card reveal"><span class="svc-em">🏖️</span><h3>Condo Insurance (HO-6)</h3><p>Interior unit coverage, loss assessment, and personal liability for Florida condo owners. Best rates across carriers who specialize in Florida's condo market.</p><div class="svc-arr">Get a Quote →</div></a>
     </div>
   </div>
 </section>
@@ -394,22 +398,22 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
 <section class="section" id="why">
   <div class="si">
     <div class="why-layout">
-      <div class="rl vis">
+      <div class="rl">
         <div class="sec-lbl">Why FL Coastal Insurance</div>
         <h2 class="sec-title">The Independent Advantage</h2>
         <p class="sec-sub">Unlike captive agents locked to one company, we shop 30+ carriers — creating real competition for your business.</p>
-        <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="btn-gold" style="display:inline-flex;margin-bottom:1.5rem">Start Saving →</a>
+        <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="btn-gold" style="display:inline-flex;margin-bottom:1.5rem">Start Saving →</a>
         <div class="partner-box">
           <div class="pb-lbl"><span>🤝</span>Realtors &amp; Mortgage Officers</div>
           <p style="font-size:0.84rem;color:var(--gray);line-height:1.7;font-weight:300">We communicate directly with lenders, provide binders and dec pages fast, and make sure nothing holds up a closing. We'd love to be your go-to insurance resource.</p>
-          <a href="mailto:andres@protectivechoice.com" class="alink" style="font-size:0.82rem;display:inline-block;margin-top:0.75rem">Partner with us →</a>
+          <a href="file:///C:/cdn-cgi/l/email-protection#84e5eae0f6e1f7c4f4f6ebf0e1e7f0edf2e1e7ecebede7e1aae7ebe9" class="alink" style="font-size:0.82rem;display:inline-block;margin-top:0.75rem">Partner with us →</a>
         </div>
       </div>
       <div class="why-cards">
-        <div class="wcard reveal vis"><div class="wcard-icon">🏪</div><h3>30+ Carriers, One Call</h3><p>We compare quotes from 30+ top-rated Florida carriers simultaneously — best rate without the runaround.</p></div>
-        <div class="wcard reveal vis"><div class="wcard-icon">🌊</div><h3>Coastal Specialists</h3><p>Wind mitigation credits, Citizens alternatives, flood zones — we navigate Florida's complex market daily.</p></div>
-        <div class="wcard reveal vis"><div class="wcard-icon">⚡</div><h3>Fast &amp; No Pressure</h3><p>Real quotes fast. Honest recommendations. Zero pressure to buy. Your timeline, your decision.</p></div>
-        <div class="wcard reveal vis"><div class="wcard-icon">🏆</div><h3>Licensed Independent</h3><p>Fully licensed Florida insurance agency. We work for you — not the carriers — 100% of the time.</p></div>
+        <div class="wcard reveal"><div class="wcard-icon">🏪</div><h3>30+ Carriers, One Call</h3><p>We compare quotes from 30+ top-rated Florida carriers simultaneously — best rate without the runaround.</p></div>
+        <div class="wcard reveal"><div class="wcard-icon">🌊</div><h3>Coastal Specialists</h3><p>Wind mitigation credits, Citizens alternatives, flood zones — we navigate Florida's complex market daily.</p></div>
+        <div class="wcard reveal"><div class="wcard-icon">⚡</div><h3>Fast &amp; No Pressure</h3><p>Real quotes fast. Honest recommendations. Zero pressure to buy. Your timeline, your decision.</p></div>
+        <div class="wcard reveal"><div class="wcard-icon">🏆</div><h3>Licensed Independent</h3><p>Fully licensed Florida insurance agency. We work for you — not the carriers — 100% of the time.</p></div>
       </div>
     </div>
   </div>
@@ -422,9 +426,9 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
     <h2 class="sec-title" style="margin:0 auto 0.85rem">Get Covered in 3 Easy Steps</h2>
     <p class="sec-sub" style="margin:0 auto 3rem">No confusing paperwork. No pressure. Real quotes fast.</p>
     <div class="proc-steps">
-      <div class="pstep reveal vis"><div class="pstep-n">1</div><h4>Tell Us What You Need</h4><p>Fill out our simple form or call us. Takes under 2 minutes.</p></div>
-      <div class="pstep reveal vis"><div class="pstep-n">2</div><h4>We Shop 30+ Carriers</h4><p>We compare every carrier simultaneously on your behalf.</p></div>
-      <div class="pstep reveal vis"><div class="pstep-n">3</div><h4>You Pick, We Bind</h4><p>Choose the best option. We handle all the paperwork.</p></div>
+      <div class="pstep reveal"><div class="pstep-n">1</div><h4>Tell Us What You Need</h4><p>Fill out our simple form or call us. Takes under 2 minutes.</p></div>
+      <div class="pstep reveal"><div class="pstep-n">2</div><h4>We Shop 30+ Carriers</h4><p>We compare every carrier simultaneously on your behalf.</p></div>
+      <div class="pstep reveal"><div class="pstep-n">3</div><h4>You Pick, We Bind</h4><p>Choose the best option. We handle all the paperwork.</p></div>
     </div>
   </div>
 </section>
@@ -441,9 +445,9 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
         <div style="font-size:0.7rem;color:var(--gray);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:600">✅ 65 Counties We Serve</div>
         <div class="counties-box"><div class="counties-flow" id="cflow"><div class="cpill" data-c="alachua">Alachua</div><div class="cpill" data-c="baker">Baker</div><div class="cpill" data-c="bay">Bay</div><div class="cpill" data-c="bradford">Bradford</div><div class="cpill" data-c="brevard">Brevard</div><div class="cpill" data-c="broward">Broward</div><div class="cpill" data-c="calhoun">Calhoun</div><div class="cpill" data-c="charlotte">Charlotte</div><div class="cpill" data-c="citrus">Citrus</div><div class="cpill" data-c="clay">Clay</div><div class="cpill" data-c="collier">Collier</div><div class="cpill" data-c="columbia">Columbia</div><div class="cpill" data-c="desoto">DeSoto</div><div class="cpill" data-c="dixie">Dixie</div><div class="cpill" data-c="duval">Duval</div><div class="cpill" data-c="escambia">Escambia</div><div class="cpill" data-c="flagler">Flagler</div><div class="cpill" data-c="franklin">Franklin</div><div class="cpill" data-c="gadsden">Gadsden</div><div class="cpill" data-c="gilchrist">Gilchrist</div><div class="cpill" data-c="glades">Glades</div><div class="cpill" data-c="gulf">Gulf</div><div class="cpill" data-c="hamilton">Hamilton</div><div class="cpill" data-c="hardee">Hardee</div><div class="cpill" data-c="hendry">Hendry</div><div class="cpill" data-c="hernando">Hernando</div><div class="cpill" data-c="highlands">Highlands</div><div class="cpill" data-c="hillsborough">Hillsborough</div><div class="cpill" data-c="holmes">Holmes</div><div class="cpill" data-c="indian river">Indian River</div><div class="cpill" data-c="jackson">Jackson</div><div class="cpill" data-c="jefferson">Jefferson</div><div class="cpill" data-c="lafayette">Lafayette</div><div class="cpill" data-c="lake">Lake</div><div class="cpill" data-c="lee">Lee</div><div class="cpill" data-c="leon">Leon</div><div class="cpill" data-c="levy">Levy</div><div class="cpill" data-c="liberty">Liberty</div><div class="cpill" data-c="madison">Madison</div><div class="cpill" data-c="marion">Marion</div><div class="cpill" data-c="martin">Martin</div><div class="cpill" data-c="miami-dade">Miami-Dade</div><div class="cpill" data-c="monroe">Monroe</div><div class="cpill" data-c="nassau">Nassau</div><div class="cpill" data-c="okaloosa">Okaloosa</div><div class="cpill" data-c="okeechobee">Okeechobee</div><div class="cpill" data-c="orange">Orange</div><div class="cpill" data-c="osceola">Osceola</div><div class="cpill" data-c="palm beach">Palm Beach</div><div class="cpill" data-c="pasco">Pasco</div><div class="cpill" data-c="pinellas">Pinellas</div><div class="cpill" data-c="polk">Polk</div><div class="cpill" data-c="putnam">Putnam</div><div class="cpill" data-c="st. johns">St. Johns</div><div class="cpill" data-c="st. lucie">St. Lucie</div><div class="cpill" data-c="santa rosa">Santa Rosa</div><div class="cpill" data-c="sarasota">Sarasota</div><div class="cpill" data-c="seminole">Seminole</div><div class="cpill" data-c="sumter">Sumter</div><div class="cpill" data-c="suwannee">Suwannee</div><div class="cpill" data-c="taylor">Taylor</div><div class="cpill" data-c="union">Union</div><div class="cpill" data-c="volusia">Volusia</div><div class="cpill" data-c="wakulla">Wakulla</div><div class="cpill" data-c="walton">Walton</div><div class="cpill" data-c="washington">Washington</div></div></div>
         <div class="excl-box"><div class="excl-lbl">❌ Not Currently Served</div><div style="font-size:0.85rem;color:var(--gray)">Manatee County</div></div>
-        <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="btn-gold" style="margin-top:1.75rem;display:inline-flex">Check My Area →</a>
+        <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="btn-gold" style="margin-top:1.75rem;display:inline-flex">Check My Area →</a>
       </div>
-      <div class="reveal vis">
+      <div class="reveal">
         <div class="map-wrap">
           <iframe src="./index_files/embed.html" width="100%" height="420" style="border:0" allowfullscreen="" loading="lazy" title="FL Coastal Insurance Service Area"></iframe>
           <div class="map-badge"><div class="mb-check">✓</div><div><div class="mb-t">65 of 67 Counties</div><div class="mb-s">All FL except Manatee</div></div></div>
@@ -457,7 +461,7 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
 <!-- QUOTE FORM -->
 <section class="section" id="quote">
   <div class="si">
-    <div class="qwrap reveal vis">
+    <div class="qwrap reveal">
       <h2 class="q-title">Get Your Free Quote</h2>
       <p class="q-sub">No obligation. No spam. Real rates from 30+ carriers — usually same business day.</p>
       <form id="qForm" action="https://formspree.io/f/mzdjpdjn" method="POST" enctype="multipart/form-data">
@@ -516,17 +520,53 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- REVIEWS -->
 <section class="section" id="testimonials">
   <div class="si">
     <div style="text-align:center;margin-bottom:3rem">
       <div class="sec-lbl">Client Reviews</div>
-      <h2 class="sec-title">Floridians Trust Us</h2>
+      <h2 class="sec-title">What Our Clients Say</h2>
+      <p style="color:var(--gray);font-size:0.95rem;max-width:480px;margin:0 auto">We're just getting started — and we'd love to hear from you. If we helped you, please leave us a review!</p>
     </div>
-    <div class="tgrid">
-      <div class="tcard reveal"><div class="stars">★★★★★</div><p class="ttext">"After Hurricane Ian we thought we'd never find affordable coastal coverage again. FL Coastal found us a policy $1,800 cheaper than Citizens quoted. Absolutely incredible."</p><div class="tauthor"><div class="tav">MR</div><div><div class="tname">Maria R.</div><div class="tloc">Fort Myers, Lee County</div></div></div></div>
-      <div class="tcard reveal"><div class="stars">★★★★★</div><p class="ttext">"As a realtor I need an insurance contact who can move fast and communicate with lenders. These guys deliver every single time. My clients love the speed."</p><div class="tauthor"><div class="tav">JT</div><div><div class="tname">James T.</div><div class="tloc">Tampa, Hillsborough County</div></div></div></div>
-      <div class="tcard reveal"><div class="stars">★★★★★</div><p class="ttext">"I own 4 rental properties in South Florida. They handle all my coverage, always find better rates at renewal, and I never have to worry about it. That's the dream."</p><div class="tauthor"><div class="tav">DK</div><div><div class="tname">David K.</div><div class="tloc">Boca Raton, Palm Beach County</div></div></div></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem" id="reviewGrid">
+      <!-- Reviews will appear here as clients submit them -->
+      <div class="tcard reveal" style="grid-column:1/-1;text-align:center;padding:3rem 2rem;border-style:dashed">
+        <div style="font-size:2.5rem;margin-bottom:1rem">🌟</div>
+        <p style="color:var(--gray);font-size:0.95rem;margin-bottom:1.5rem;font-weight:300">Be the first to leave a review! We'd love to hear about your experience with FL Coastal Insurance.</p>
+        <a href="file:///C:/Users/Andres/Downloads/index_4.html#leave-review" class="btn-gold" onclick="document.getElementById(&#39;review-form-wrap&#39;).scrollIntoView({behavior:&#39;smooth&#39;});return false;">Leave Us a Review →</a>
+      </div>
+    </div>
+
+    <!-- LEAVE A REVIEW FORM -->
+    <div id="review-form-wrap" style="max-width:600px;margin:3rem auto 0;background:var(--card);border:1px solid rgba(201,168,76,0.2);border-radius:20px;padding:2.5rem">
+      <div style="text-align:center;margin-bottom:1.75rem">
+        <div class="sec-lbl" style="text-align:center">Share Your Experience</div>
+        <h3 style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.8rem;font-weight:700">Leave a Review</h3>
+        <p style="color:var(--gray);font-size:0.85rem;margin-top:0.4rem">Your feedback helps other Floridians find the right coverage</p>
+      </div>
+      <!-- Star picker -->
+      <div style="text-align:center;margin-bottom:1.5rem">
+        <div style="font-size:0.7rem;color:var(--light);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:0.6rem">Your Rating</div>
+        <div id="starPicker" style="display:flex;justify-content:center;gap:0.5rem;font-size:2.2rem;cursor:pointer">
+          <span class="star" data-v="1">☆</span>
+          <span class="star" data-v="2">☆</span>
+          <span class="star" data-v="3">☆</span>
+          <span class="star" data-v="4">☆</span>
+          <span class="star" data-v="5">☆</span>
+        </div>
+        <input type="hidden" id="starValue" value="0">
+      </div>
+      <form id="reviewForm" action="https://formspree.io/f/mzdjpdjn" method="POST" onsubmit="submitReview(event)">
+        <div class="frow">
+          <div class="fg"><label>Your Name</label><input type="text" name="reviewer_name" placeholder="Jane D." required=""></div>
+          <div class="fg"><label>Your City / County</label><input type="text" name="reviewer_location" placeholder="Miami, Miami-Dade"></div>
+        </div>
+        <div class="fg"><label>Your Review</label><textarea name="review_text" placeholder="Tell others about your experience with FL Coastal Insurance..." style="min-height:110px" required=""></textarea></div>
+        <input type="hidden" name="_subject" value="⭐ New Client Review — FL Coastal Insurance">
+        <input type="hidden" name="form_type" value="client_review">
+        <input type="hidden" name="star_rating" id="starHidden" value="Not rated">
+        <button type="submit" class="submit-btn" id="reviewBtn">Submit My Review ⭐</button>
+      </form>
     </div>
   </div>
 </section>
@@ -571,58 +611,58 @@ footer{background:#040b14;padding:4rem 2rem 1.5rem;border-top:1px solid var(--bo
 <div id="cta-band">
   <h2>Ready to Stop Overpaying for Insurance?</h2>
   <p>Join hundreds of Florida homeowners and businesses who let us do the shopping.</p>
-  <a href="file:///C:/Users/Andres/Downloads/index_3.html#quote" class="btn-gold" style="font-size:1rem;padding:1rem 2.25rem">Get My Free Quote — Takes 2 Minutes</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_4.html#quote" class="btn-gold" style="font-size:1rem;padding:1rem 2.25rem">Get My Free Quote — Takes 2 Minutes</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="fgrid">
     <div class="fbrand">
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#" class="nav-logo"><div class="logo-mark">🌊</div><div class="logo-words"><div class="l1">FL Coastal Insurance</div><div class="l2">Independent Agency · LLC</div></div></a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#" class="nav-logo"><div class="logo-mark">🌊</div><div class="logo-words"><div class="l1">FL Coastal Insurance</div><div class="l2">Independent Agency · LLC</div></div></a>
       <p>Florida's independent insurance agency. We shop 30+ carriers across 65 counties for the best coverage at the lowest price.</p>
     </div>
     <div class="fcol">
       <h4>Coverage</h4>
       <ul>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#services">Homeowners</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#services">Flood Insurance</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#services">Wind / Hurricane</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#services">Commercial</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#services">Rental Property</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#services">Condo / HO-6</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#services">Homeowners</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#services">Flood Insurance</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#services">Wind / Hurricane</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#services">Commercial</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#services">Rental Property</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#services">Condo / HO-6</a></li>
       </ul>
     </div>
     <div class="fcol">
       <h4>Company</h4>
       <ul>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#why">About Us</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#coverage">Service Area</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#faq">FAQ</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#quote">Get a Quote</a></li>
-        <li><a href="mailto:andres@flcoastalinsurance.com">Contact</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#why">About Us</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#coverage">Service Area</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#faq">FAQ</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#quote">Get a Quote</a></li>
+        <li><a href="file:///C:/cdn-cgi/l/email-protection#61000f0513041221070d020e001215000d080f121413000f02044f020e0c">Contact</a></li>
       </ul>
     </div>
     <div class="fcol">
       <h4>Contact</h4>
       <ul>
         <li><a href="tel:+17542851953" class="alink">📞 (754) 285-1953</a></li>
-        <li><a href="mailto:andres@protectivechoice.com">📧 Quotes Email</a></li>
-        <li><a href="mailto:andres@flcoastalinsurance.com">🏢 Admin Email</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_3.html#coverage">📍 All FL (except Manatee)</a></li>
+        <li><a href="file:///C:/cdn-cgi/l/email-protection#2b4a454f594e586b5b59445f4e485f425d4e48434442484e05484446">📧 Quotes Email</a></li>
+        <li><a href="file:///C:/cdn-cgi/l/email-protection#a6c7c8c2d4c3d5e6c0cac5c9c7d5d2c7cacfc8d5d3d4c7c8c5c388c5c9cb">🏢 Admin Email</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_4.html#coverage">📍 All FL (except Manatee)</a></li>
       </ul>
     </div>
   </div>
   <div class="fbot">
     <p>© 2025 FL Coastal Insurance LLC. All rights reserved. Licensed Florida Insurance Agency.</p>
     <div class="fbot-links">
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#">Privacy Policy</a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#">Terms</a>
-      <a href="file:///C:/Users/Andres/Downloads/index_3.html#">License Info</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#">Privacy Policy</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#">Terms</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_4.html#">License Info</a>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="file:///C:/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // NAV SCROLL
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
@@ -654,10 +694,13 @@ function closeMobile() {
   document.getElementById('hbtn').classList.remove('open');
   document.body.style.overflow = '';
 }
-// close mobile if clicking outside
-document.getElementById('mmenu').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeMobile();
-});
+function mobNav(target) {
+  closeMobile();
+  setTimeout(() => {
+    const el = document.querySelector(target);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, 350);
+}
 
 // PARTICLES
 (function() {
@@ -767,10 +810,8 @@ document.getElementById('qForm').addEventListener('submit', async function(e) {
       btn.style.color = 'white';
       this.querySelectorAll('input:not([type=checkbox]):not([type=hidden]):not([type=file]),select,textarea').forEach(i => i.value='');
       document.querySelectorAll('.cpk').forEach(p => { p.classList.remove('on'); p.querySelector('input').checked=false; });
-      files = []; renderFiles();
-    } else {
-      throw new Error();
-    }
+          files = []; renderFiles();
+    } else { throw new Error(); }
   } catch {
     btn.textContent = '❌ Something went wrong — please call (754) 285-1953';
     btn.style.background = 'rgba(255,100,100,0.15)';
@@ -778,6 +819,54 @@ document.getElementById('qForm').addEventListener('submit', async function(e) {
     btn.disabled = false;
   }
 });
+
+// STAR PICKER
+let starRating = 0;
+document.querySelectorAll('.star').forEach(star => {
+  star.addEventListener('mouseover', function() {
+    const v = +this.dataset.v;
+    document.querySelectorAll('.star').forEach(s => {
+      s.textContent = +s.dataset.v <= v ? '★' : '☆';
+      s.classList.toggle('on', +s.dataset.v <= v);
+    });
+  });
+  star.addEventListener('mouseout', function() {
+    document.querySelectorAll('.star').forEach(s => {
+      s.textContent = +s.dataset.v <= starRating ? '★' : '☆';
+      s.classList.toggle('on', +s.dataset.v <= starRating);
+    });
+  });
+  star.addEventListener('click', function() {
+    starRating = +this.dataset.v;
+    document.getElementById('starHidden').value = starRating + ' / 5 stars';
+  });
+});
+
+// REVIEW FORM
+async function submitReview(e) {
+  e.preventDefault();
+  if (!starRating) { alert('Please select a star rating first!'); return; }
+  const btn = document.getElementById('reviewBtn');
+  btn.textContent = '⏳ Submitting...';
+  btn.disabled = true;
+  const data = new FormData(e.target);
+  try {
+    const res = await fetch(e.target.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+    if (res.ok) {
+      btn.textContent = '✅ Thank you for your review!';
+      btn.style.background = 'linear-gradient(135deg,#17a8c4,#2e86c1)';
+      btn.style.color = 'white';
+      e.target.querySelectorAll('input:not([type=hidden]),textarea').forEach(i => i.value='');
+      starRating = 0;
+      document.querySelectorAll('.star').forEach(s => { s.textContent='☆'; s.classList.remove('on'); });
+    } else { throw new Error(); }
+  } catch {
+    btn.textContent = '❌ Error — please email andres@protectivechoice.com';
+    btn.style.background = 'rgba(255,100,100,0.15)';
+    btn.style.color = '#ff9090';
+    btn.disabled = false;
+  }
+}
 </script>
 
 
