@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/Andres/Downloads/index_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FL Coastal Insurance LLC | Independent Insurance Agency | All Florida Counties</title>
+<meta name="description" content="FL Coastal Insurance LLC is an independent insurance agency serving all Florida counties. We shop 30+ carriers to find you the best rates on homeowners, flood, wind, and commercial insurance.">
+<meta name="keywords" content="Florida insurance, homeowners insurance Florida, independent insurance agent Florida, coastal property insurance, flood insurance Florida, commercial insurance Florida">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #0d2144;
+    --ocean: #1a4a7a;
+    --sky: #2e86c1;
+    --aqua: #17a8c4;
+    --gold: #c9a84c;
+    --gold-light: #e8c96e;
+    --white: #f8f9fa;
+    --off-white: #eef2f7;
+    --gray: #8a9ab5;
+    --light-gray: #d4dce8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 1.2rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10,22,40,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--aqua), var(--sky));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+
+  .logo-text { line-height: 1.1; }
+  .logo-text .top { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); letter-spacing: 0.02em; }
+  .logo-text .bottom { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--light-gray); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(201,168,76,0.4); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    padding: 8rem 4rem 4rem;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,74,122,0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(23,168,196,0.12) 0%, transparent 50%),
+      linear-gradient(160deg, #0a1628 0%, #0d2144 50%, #0a1e35 100%);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.04;
+    background-image: linear-gradient(var(--light-gray) 1px, transparent 1px), linear-gradient(90deg, var(--light-gray) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* animated wave lines */
+  .wave-lines {
+    position: absolute; bottom: 0; left: 0; right: 0; z-index: 0;
+    height: 200px; overflow: hidden;
+  }
+  .wave-lines svg { width: 100%; height: 100%; opacity: 0.12; }
+
+  .hero-content { position: relative; z-index: 1; max-width: 680px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 100px;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero h1 .accent { color: var(--aqua); }
+  .hero h1 .gold { color: var(--gold); }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+    font-weight: 300;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.4); }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3.5rem;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .stat { border-left: 2px solid var(--gold); padding-left: 1rem; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--white); line-height: 1; }
+  .stat-label { font-size: 0.75rem; color: var(--gray); letter-spacing: 0.05em; margin-top: 0.25rem; text-transform: uppercase; }
+
+  .hero-visual {
+    position: absolute; right: 4rem; top: 50%; transform: translateY(-50%);
+    z-index: 1;
+    animation: fadeIn 1s 0.3s ease both;
+  }
+
+  .shield-card {
+    width: 340px;
+    background: rgba(13,33,68,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  .shield-header {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .shield-icon { font-size: 2.5rem; }
+  .shield-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; }
+  .shield-sub { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.05em; }
+
+  .coverage-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .coverage-item {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: rgba(255,255,255,0.04);
+    border-radius: 8px; padding: 0.75rem 1rem;
+    font-size: 0.875rem; font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+  .coverage-item:hover { background: rgba(255,255,255,0.07); }
+  .coverage-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--aqua); flex-shrink: 0; }
+  .coverage-item .check { margin-left: auto; color: var(--gold); }
+
+  .carrier-bar {
+    margin-top: 1.5rem; padding-top: 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+  .carrier-bar p { font-size: 0.7rem; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .carrier-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--aqua); }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 1.5rem 4rem;
+    display: flex; align-items: center; justify-content: center; gap: 4rem;
+    flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--gray); font-weight: 500; }
+  .trust-item span { font-size: 1.1rem; }
+
+  /* ── SECTIONS COMMON ── */
+  section { padding: 6rem 4rem; }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.75rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+  .section-sub { color: var(--gray); font-size: 1.05rem; line-height: 1.7; max-width: 560px; font-weight: 300; margin-bottom: 3rem; }
+
+  /* ── WHY US ── */
+  .why-us { background: var(--deep-blue); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1100px; margin: 0 auto; }
+  .why-header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }
+
+  .why-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--aqua), var(--sky));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .why-card:hover { transform: translateY(-4px); border-color: rgba(23,168,196,0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+  .why-card:hover::before { transform: scaleX(1); }
+
+  .why-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .why-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--navy); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+
+  .service-card {
+    background: linear-gradient(145deg, rgba(13,33,68,0.9), rgba(10,22,40,0.9));
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 2rem;
+    text-decoration: none; color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    display: block;
+    position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(23,168,196,0.08), transparent 60%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .service-card:hover { transform: translateY(-5px); box-shadow: 0 25px 60px rgba(0,0,0,0.4); border-color: rgba(23,168,196,0.25); }
+  .service-card:hover::after { opacity: 1; }
+
+  .service-emoji { font-size: 2.2rem; margin-bottom: 1.25rem; }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; }
+  .service-card p { color: var(--gray); font-size: 0.85rem; line-height: 1.65; font-weight: 300; }
+  .service-arrow { margin-top: 1.25rem; color: var(--aqua); font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.3rem; }
+
+  /* ── PROCESS ── */
+  .process { background: rgba(13,33,68,0.5); }
+  .process-steps { display: flex; gap: 0; max-width: 900px; margin: 0 auto; position: relative; }
+  .process-steps::before {
+    content: ''; position: absolute; top: 2.5rem; left: 2.5rem; right: 2.5rem;
+    height: 2px; background: linear-gradient(90deg, var(--aqua), var(--gold));
+    z-index: 0;
+  }
+  .step { flex: 1; text-align: center; position: relative; z-index: 1; padding: 0 1rem; }
+  .step-num {
+    width: 5rem; height: 5rem; border-radius: 50%;
+    background: linear-gradient(135deg, var(--ocean), var(--sky));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900;
+    margin: 0 auto 1.25rem;
+    border: 3px solid var(--navy);
+    box-shadow: 0 0 0 2px var(--aqua);
+  }
+  .step h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .step p { font-size: 0.8rem; color: var(--gray); line-height: 1.6; }
+
+  /* ── FLORIDA COVERAGE ── */
+  .coverage-section { background: var(--deep-blue); }
+  .coverage-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .fl-map-wrapper { position: relative; }
+  .fl-svg { display: none; }
+
+  .map-frame-outer {
+    display: flex; flex-direction: column; gap: 0.75rem;
+  }
+  .map-badge-top {
+    background: rgba(23,168,196,0.12);
+    border: 1px solid rgba(23,168,196,0.25);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--aqua);
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .map-frame-inner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(23,168,196,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  .map-overlay-badge {
+    position: absolute;
+    bottom: 14px; left: 14px;
+    background: rgba(10,22,40,0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    display: flex; align-items: center; gap: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .mob-check { font-size: 1.4rem; color: var(--aqua); font-weight: 900; line-height: 1; }
+  .mob-title { font-weight: 700; font-size: 0.85rem; color: var(--white); }
+  .mob-sub { font-size: 0.7rem; color: var(--gray); margin-top: 1px; }
+  .map-badge-bottom {
+    display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.78rem; color: var(--gray); font-weight: 500;
+  }
+
+  .counties-scroll {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-height: 280px;
+    overflow-y: auto;
+    margin-top: 1.5rem;
+  }
+  .counties-scroll::-webkit-scrollbar { width: 4px; }
+  .counties-scroll::-webkit-scrollbar-track { background: transparent; }
+  .counties-scroll::-webkit-scrollbar-thumb { background: var(--ocean); border-radius: 4px; }
+
+  .counties-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+  .county-tag {
+    font-size: 0.75rem; padding: 0.3rem 0.6rem; border-radius: 4px;
+    background: rgba(23,168,196,0.08); color: var(--light-gray);
+    border: 1px solid rgba(23,168,196,0.15);
+  }
+  .county-excluded { background: rgba(255,100,100,0.08); border-color: rgba(255,100,100,0.2); color: #ff9999; }
+
+  /* ── QUOTE FORM ── */
+  .quote-section { background: var(--navy); }
+  .quote-wrapper {
+    max-width: 700px; margin: 0 auto;
+    background: linear-gradient(145deg, rgba(13,33,68,0.95), rgba(10,22,40,0.95));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+  }
+  .quote-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; text-align: center; }
+  .quote-sub { color: var(--gray); text-align: center; font-size: 0.9rem; margin-bottom: 2rem; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+  .form-group label { font-size: 0.8rem; font-weight: 600; color: var(--light-gray); letter-spacing: 0.05em; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--aqua);
+    background: rgba(255,255,255,0.09);
+  }
+  .form-group select option { background: var(--deep-blue); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .checkbox-group { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .checkbox-label {
+    display: flex; align-items: center; gap: 0.4rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px; padding: 0.5rem 0.75rem;
+    font-size: 0.8rem; cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .checkbox-label:hover { background: rgba(23,168,196,0.1); border-color: var(--aqua); }
+  .checkbox-label input { display: none; }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    border: none;
+    padding: 1.1rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.4); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: rgba(13,33,68,0.6); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .testimonial-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.75rem;
+  }
+  .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+  .testimonial-text { color: var(--light-gray); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.25rem; font-weight: 300; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--ocean), var(--aqua));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.9rem;
+  }
+  .author-name { font-weight: 600; font-size: 0.875rem; }
+  .author-loc { font-size: 0.75rem; color: var(--gray); }
+
+  /* ── FAQ ── */
+  .faq { background: var(--deep-blue); }
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1.5rem 0;
+  }
+  .faq-question {
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; font-weight: 600; font-size: 1rem;
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--aqua); }
+  .faq-toggle { font-size: 1.5rem; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; margin-left: 1rem; }
+  .faq-answer { color: var(--gray); font-size: 0.9rem; line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+  .faq-item.open .faq-answer { max-height: 200px; padding-top: 1rem; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--ocean) 0%, var(--deep-blue) 50%, var(--navy) 100%);
+    border-top: 1px solid rgba(201,168,76,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 5rem 4rem;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-banner::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(23,168,196,0.1), transparent);
+  }
+  .cta-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1rem; position: relative; }
+  .cta-banner p { color: var(--gray); font-size: 1.1rem; margin-bottom: 2.5rem; position: relative; }
+  .cta-banner .btn-primary { font-size: 1.1rem; padding: 1.1rem 2.5rem; position: relative; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060e1a;
+    padding: 4rem 4rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand p { color: var(--gray); font-size: 0.875rem; line-height: 1.7; margin-top: 1rem; max-width: 280px; }
+  .footer-col h4 { font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col ul a { color: var(--gray); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+  .footer-col ul a:hover { color: var(--white); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-bottom p { color: var(--gray); font-size: 0.8rem; }
+
+  .phone-link { color: var(--aqua); text-decoration: none; font-weight: 600; }
+  .phone-link:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── MOBILE ── */
+  /* ── INSPECTION UPLOAD ── */
+  .inspection-upload-box {
+    background: linear-gradient(135deg, rgba(23,168,196,0.07), rgba(46,134,193,0.05));
+    border: 1px solid rgba(23,168,196,0.25);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .inspection-header {
+    display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem;
+  }
+  .inspection-icon { font-size: 1.75rem; flex-shrink: 0; margin-top: 2px; }
+  .inspection-title { font-weight: 700; font-size: 1rem; color: var(--white); margin-bottom: 0.3rem; }
+  .inspection-sub { font-size: 0.8rem; color: var(--gray); line-height: 1.55; }
+
+  .upload-zone {
+    border: 2px dashed rgba(23,168,196,0.35);
+    border-radius: 10px;
+    padding: 1.75rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    background: rgba(255,255,255,0.02);
+  }
+  .upload-zone:hover, .upload-zone.dragover {
+    border-color: var(--aqua);
+    background: rgba(23,168,196,0.08);
+  }
+  .upload-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .upload-text { font-weight: 600; font-size: 0.9rem; color: var(--aqua); margin-bottom: 0.25rem; }
+  .upload-hint { font-size: 0.75rem; color: var(--gray); }
+
+  .file-list { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .file-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(23,168,196,0.1); border: 1px solid rgba(23,168,196,0.2);
+    border-radius: 6px; padding: 0.5rem 0.75rem;
+    font-size: 0.8rem; color: var(--light-gray);
+  }
+  .file-remove { color: var(--gray); cursor: pointer; font-size: 1.1rem; line-height: 1; transition: color 0.2s; }
+  .file-remove:hover { color: #ff7070; }
+
+  .inspection-badge {
+    margin-top: 0.85rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 100px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.75rem; color: var(--gold); font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .hero-visual { display: none; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    section { padding: 4rem 1.5rem; }
+    .trust-bar { padding: 1.5rem; gap: 1.5rem; }
+    .why-grid, .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .why-header { grid-column: 1; }
+    .form-row { grid-template-columns: 1fr; }
+    .coverage-layout { grid-template-columns: 1fr; }
+    .process-steps { flex-direction: column; gap: 2rem; }
+    .process-steps::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .quote-wrapper { padding: 2rem 1.5rem; }
+    .cta-banner { padding: 3rem 1.5rem; }
+    footer { padding: 3rem 1.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="file:///C:/Users/Andres/Downloads/index_1.html#" class="nav-logo">
+    <div class="logo-icon">🌊</div>
+    <div class="logo-text">
+      <div class="top">FL Coastal Insurance</div>
+      <div class="bottom">Independent Agency · LLC</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#services">Coverage</a></li>
+    <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#why-us">Why Us</a></li>
+    <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#coverage-area">Service Area</a></li>
+    <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#faq">FAQ</a></li>
+  </ul>
+  <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="nav-cta">Get Free Quote →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="wave-lines">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,100 C240,160 480,40 720,100 C960,160 1200,40 1440,100 L1440,200 L0,200 Z" fill="#17a8c4"></path>
+      <path d="M0,130 C320,80 640,170 960,120 C1120,95 1300,150 1440,130 L1440,200 L0,200 Z" fill="#2e86c1" opacity="0.6"></path>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">⚓ Florida's Independent Insurance Specialists</div>
+    <h1>
+      Shop <span class="accent">30+ Carriers.</span><br>
+      One <span class="gold">Trusted Agent.</span><br>
+      All of Florida.
+    </h1>
+    <p class="hero-sub">
+      We do the heavy lifting — comparing dozens of top carriers to find you the best coverage at the lowest rate. Homeowners, flood, wind, commercial. All 65 Florida counties (except Manatee).
+    </p>
+    <div class="hero-actions">
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="btn-primary">Get My Free Quote →</a>
+      <a href="tel:+17542851953" class="btn-secondary">📞 Call Us Now</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Carriers We Shop</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">65</div>
+        <div class="stat-label">FL Counties Served</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Independent &amp; Unbiased</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="shield-card">
+      <div class="shield-header">
+        <div class="shield-icon">🛡️</div>
+        <div>
+          <div class="shield-title">Complete Protection</div>
+          <div class="shield-sub">WE SHOP SO YOU DON'T HAVE TO</div>
+        </div>
+      </div>
+      <div class="coverage-list">
+        <div class="coverage-item"><div class="coverage-dot"></div> Homeowners Insurance <span class="check">✓</span></div>
+        <div class="coverage-item"><div class="coverage-dot"></div> Flood Insurance <span class="check">✓</span></div>
+        <div class="coverage-item"><div class="coverage-dot"></div> Wind / Hurricane <span class="check">✓</span></div>
+        <div class="coverage-item"><div class="coverage-dot"></div> Commercial Property <span class="check">✓</span></div>
+        <div class="coverage-item"><div class="coverage-dot"></div> Condo / HO-6 <span class="check">✓</span></div>
+        <div class="coverage-item"><div class="coverage-dot"></div> Landlord / Rental <span class="check">✓</span></div>
+      </div>
+      <div class="carrier-bar">
+        <p>Carriers in our network</p>
+        <div class="carrier-num">30+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span>🏆</span> Licensed Florida Agent</div>
+  <div class="trust-item"><span>⚡</span> Same-Day Quotes</div>
+  <div class="trust-item"><span>🔒</span> No Obligation, Ever</div>
+  <div class="trust-item"><span>🤝</span> Independent &amp; Unbiased</div>
+  <div class="trust-item"><span>🌊</span> Coastal Specialists</div>
+</div>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="why-grid">
+    <div class="why-header">
+      <div>
+        <div class="section-label">Why FL Coastal Insurance</div>
+        <h2 class="section-title">The Independent Advantage</h2>
+        <p class="section-sub">Unlike captive agents locked to one company, we shop the entire market — 30+ carriers fighting for your business means lower rates and better coverage.</p>
+      </div>
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="btn-primary" style="white-space:nowrap">Start Saving →</a>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon">🏪</div>
+      <h3>30+ Carriers, One Call</h3>
+      <p>We're not locked to a single company. We compare quotes from over 30 top-rated Florida carriers simultaneously — so you get the best rate without calling around for hours.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon">🌊</div>
+      <h3>Florida Coastal Specialists</h3>
+      <p>We know Florida's market better than anyone — wind mitigation credits, Citizens Insurance alternatives, flood zones, coastal underwriting. We navigate it all for you.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon">⚡</div>
+      <h3>Fast Quotes, Zero Pressure</h3>
+      <p>Get a real quote fast — not a bait-and-switch. We give you straight answers, honest recommendations, and zero pressure to buy. Your best coverage, on your timeline.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon">🏡</div>
+      <h3>Realtors &amp; Lenders Love Us</h3>
+      <p>We partner with mortgage officers and real estate agents across Florida. Need to close fast? We bind coverage quickly and communicate directly with your lender.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-label">What We Cover</div>
+    <h2 class="section-title">Complete Florida Coverage</h2>
+    <p class="section-sub">From beachfront condos to inland commercial properties, we have the right coverage for every Florida risk.</p>
+
+    <div class="services-grid">
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="service-card reveal">
+        <div class="service-emoji">🏠</div>
+        <h3>Homeowners Insurance</h3>
+        <p>HO-3, HO-6, standard and high-value homes across all price ranges. We also specialize in quoting luxury and high-end properties — and we find coverage even in difficult coastal and high-wind zones where other agents give up.</p>
+        <div class="service-arrow">Get a Quote →</div>
+      </a>
+
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="service-card reveal">
+        <div class="service-emoji">🌊</div>
+        <h3>Flood Insurance</h3>
+        <p>NFIP and private flood options. We compare to find the best rate for your flood zone — and often save clients thousands over the standard NFIP policy.</p>
+        <div class="service-arrow">Get a Quote →</div>
+      </a>
+
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="service-card reveal">
+        <div class="service-emoji">🏖️</div>
+        <h3>Condo Insurance (HO-6)</h3>
+        <p>Interior unit coverage, loss assessment, and personal liability for Florida condo owners. We find the best rates across carriers who specialize in Florida's condo market.</p>
+        <div class="service-arrow">Get a Quote →</div>
+      </a>
+
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="service-card reveal">
+        <div class="service-emoji">🏢</div>
+        <h3>Commercial Insurance</h3>
+        <p>BOP, general liability, commercial property, workers' comp. Full commercial lines coverage for Florida businesses of all sizes and industries.</p>
+        <div class="service-arrow">Get a Quote →</div>
+      </a>
+
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="service-card reveal">
+        <div class="service-emoji">🌀</div>
+        <h3>Wind &amp; Hurricane Coverage</h3>
+        <p>Dedicated wind-only policies, Citizens alternatives, and wind mitigation inspections. We specialize in keeping coastal Floridians covered at fair prices.</p>
+        <div class="service-arrow">Get a Quote →</div>
+      </a>
+
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="service-card reveal">
+        <div class="service-emoji">🏗️</div>
+        <h3>Landlord &amp; Rental Property</h3>
+        <p>DP-1, DP-3, and landlord liability policies for investment properties, vacation rentals, and multi-family units throughout Florida.</p>
+        <div class="service-arrow">Get a Quote →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div style="max-width:900px;margin:0 auto;text-align:center">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Get Covered in 3 Easy Steps</h2>
+    <p class="section-sub" style="margin:0 auto 3.5rem">No confusing forms. No pressure. Just real quotes from real carriers in record time.</p>
+
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h4>Tell Us What You Need</h4>
+        <p>Fill out our simple form or give us a call. Takes less than 2 minutes.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h4>We Shop 30+ Carriers</h4>
+        <p>We compare quotes from every carrier we work with — all at once, on your behalf.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h4>You Pick, We Bind</h4>
+        <p>Choose the best option for your budget and needs. We handle the paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE AREA -->
+<section class="coverage-section" id="coverage-area">
+  <div class="coverage-layout">
+    <div>
+      <div class="section-label">Service Area</div>
+      <h2 class="section-title">Serving All of Florida</h2>
+      <p class="section-sub">We're licensed to serve clients in 65 of 67 Florida counties — from Pensacola to Key West and everywhere in between.</p>
+
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:1.25rem;margin-bottom:1rem;">
+        <p style="font-size:0.8rem;color:var(--gray);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">✅ We Serve (65 Counties)</p>
+        <p style="font-size:0.85rem;color:var(--light-gray);line-height:1.8;">
+          Alachua · Baker · Bay · Bradford · Brevard · Broward · Calhoun · Charlotte · Citrus · Clay · Collier · Columbia · DeSoto · Dixie · Duval · Escambia · Flagler · Franklin · Gadsden · Gilchrist · Glades · Gulf · Hamilton · Hardee · Hendry · Hernando · Highlands · Hillsborough · Holmes · Indian River · Jackson · Jefferson · Lafayette · Lake · Lee · Leon · Levy · Liberty · Madison · Marion · Martin · Miami-Dade · Monroe · Nassau · Okaloosa · Okeechobee · Orange · Osceola · Palm Beach · Pasco · Pinellas · Polk · Putnam · St. Johns · St. Lucie · Santa Rosa · Sarasota · Seminole · Sumter · Suwannee · Taylor · Union · Volusia · Wakulla · Walton · Washington
+        </p>
+      </div>
+
+      <div style="background:rgba(255,100,100,0.06);border:1px solid rgba(255,100,100,0.15);border-radius:12px;padding:1.25rem;">
+        <p style="font-size:0.8rem;color:#ff9999;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">❌ Not Currently Served</p>
+        <p style="font-size:0.85rem;color:var(--gray);margin-top:0.3rem;">Manatee County</p>
+      </div>
+
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="btn-primary" style="margin-top:2rem;display:inline-flex">Check My Area →</a>
+    </div>
+
+    <div class="fl-map-wrapper">
+      <!-- REAL MAP: Google Maps embed showing Florida -->
+      <div class="map-frame-outer">
+        <div class="map-badge-top">🌊 FL Coastal Insurance — Licensed Statewide</div>
+        <div class="map-frame-inner">
+          <iframe src="./index_files/embed.html" width="100%" height="460" style="border:0;border-radius:12px;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="FL Coastal Insurance Service Area — All Florida Counties">
+          </iframe>
+          <div class="map-overlay-badge">
+            <span class="mob-check">✓</span>
+            <div>
+              <div class="mob-title">65 of 67 Counties Covered</div>
+              <div class="mob-sub">All FL except Manatee County</div>
+            </div>
+          </div>
+        </div>
+        <div class="map-badge-bottom">
+          <span>📍 From Pensacola to Key West</span>
+          <span>·</span>
+          <span>🏠 Home · Flood · Wind · Commercial</span>
+        </div>
+      </div>
+      <!-- hidden old SVG stub so nothing breaks -->
+      <svg style="display:none" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <lineargradient id="flGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e5799"></stop>
+            <stop offset="50%" style="stop-color:#1a6eb5"></stop>
+            <stop offset="100%" style="stop-color:#17a8c4"></stop>
+          </lineargradient>
+          <lineargradient id="flGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#2176c7;stop-opacity:0.9"></stop>
+            <stop offset="100%" style="stop-color:#0d4f8a;stop-opacity:1"></stop>
+          </lineargradient>
+          <filter id="mapGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <fegaussianblur stdDeviation="6" result="blur"></fegaussianblur>
+            <fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+          </filter>
+          <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+            <fegaussianblur stdDeviation="4" result="coloredBlur"></fegaussianblur>
+            <femerge><femergenode in="coloredBlur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
+          </filter>
+          <clippath id="flClip">
+            <!-- Full Florida outline used as clip path -->
+            <path d="
+              M 30,42 L 248,30 L 268,32 L 278,38 L 282,52
+              L 282,72 L 278,80
+              C 290,80 310,78 322,80
+              C 334,82 340,90 342,102
+              C 344,118 340,136 338,152
+              C 340,168 346,182 350,198
+              C 356,218 360,240 362,262
+              C 364,284 362,306 356,326
+              C 350,346 340,364 326,380
+              C 314,394 298,406 282,416
+              C 268,426 254,434 242,444
+              C 232,452 224,460 216,468
+              C 208,476 200,482 192,484
+              C 184,486 176,482 168,474
+              C 158,464 148,450 138,434
+              C 126,416 114,396 102,374
+              C 90,352 80,328 74,304
+              C 68,280 66,256 66,232
+              C 66,208 68,184 68,162
+              C 68,140 66,120 64,100
+              C 62,82 56,66 50,54
+              C 42,44 30,42 30,42 Z
+            "></path>
+          </clippath>
+          <radialgradient id="innerGlow" cx="55%" cy="45%" r="50%">
+            <stop offset="0%" style="stop-color:#4db8d4;stop-opacity:0.3"></stop>
+            <stop offset="100%" style="stop-color:#0d2144;stop-opacity:0"></stop>
+          </radialgradient>
+        </defs>
+
+        <!-- Outer glow halo -->
+        <path d="
+          M 30,42 L 248,30 L 268,32 L 278,38 L 282,52
+          L 282,72 L 278,80
+          C 290,80 310,78 322,80
+          C 334,82 340,90 342,102
+          C 344,118 340,136 338,152
+          C 340,168 346,182 350,198
+          C 356,218 360,240 362,262
+          C 364,284 362,306 356,326
+          C 350,346 340,364 326,380
+          C 314,394 298,406 282,416
+          C 268,426 254,434 242,444
+          C 232,452 224,460 216,468
+          C 208,476 200,482 192,484
+          C 184,486 176,482 168,474
+          C 158,464 148,450 138,434
+          C 126,416 114,396 102,374
+          C 90,352 80,328 74,304
+          C 68,280 66,256 66,232
+          C 66,208 68,184 68,162
+          C 68,140 66,120 64,100
+          C 62,82 56,66 50,54
+          C 42,44 30,42 30,42 Z
+        " fill="rgba(23,168,196,0.15)" filter="url(#mapGlow)"></path>
+
+        <!-- Main Florida body -->
+        <path d="
+          M 30,42 L 248,30 L 268,32 L 278,38 L 282,52
+          L 282,72 L 278,80
+          C 290,80 310,78 322,80
+          C 334,82 340,90 342,102
+          C 344,118 340,136 338,152
+          C 340,168 346,182 350,198
+          C 356,218 360,240 362,262
+          C 364,284 362,306 356,326
+          C 350,346 340,364 326,380
+          C 314,394 298,406 282,416
+          C 268,426 254,434 242,444
+          C 232,452 224,460 216,468
+          C 208,476 200,482 192,484
+          C 184,486 176,482 168,474
+          C 158,464 148,450 138,434
+          C 126,416 114,396 102,374
+          C 90,352 80,328 74,304
+          C 68,280 66,256 66,232
+          C 66,208 68,184 68,162
+          C 68,140 66,120 64,100
+          C 62,82 56,66 50,54
+          C 42,44 30,42 30,42 Z
+        " fill="url(#flGrad2)" stroke="rgba(23,168,196,0.9)" stroke-width="2" filter="url(#softGlow)"></path>
+
+        <!-- Inner radial highlight -->
+        <path d="
+          M 30,42 L 248,30 L 268,32 L 278,38 L 282,52
+          L 282,72 L 278,80
+          C 290,80 310,78 322,80
+          C 334,82 340,90 342,102
+          C 344,118 340,136 338,152
+          C 340,168 346,182 350,198
+          C 356,218 360,240 362,262
+          C 364,284 362,306 356,326
+          C 350,346 340,364 326,380
+          C 314,394 298,406 282,416
+          C 268,426 254,434 242,444
+          C 232,452 224,460 216,468
+          C 208,476 200,482 192,484
+          C 184,486 176,482 168,474
+          C 158,464 148,450 138,434
+          C 126,416 114,396 102,374
+          C 90,352 80,328 74,304
+          C 68,280 66,256 66,232
+          C 66,208 68,184 68,162
+          C 68,140 66,120 64,100
+          C 62,82 56,66 50,54
+          C 42,44 30,42 30,42 Z
+        " fill="url(#innerGlow)"></path>
+
+        <!-- Florida Keys chain -->
+        <g opacity="0.85">
+          <ellipse cx="194" cy="492" rx="6" ry="4" fill="#17a8c4" stroke="rgba(23,168,196,0.6)" stroke-width="1"></ellipse>
+          <ellipse cx="210" cy="500" rx="5" ry="3.5" fill="#17a8c4" stroke="rgba(23,168,196,0.6)" stroke-width="1"></ellipse>
+          <ellipse cx="225" cy="507" rx="5" ry="3" fill="#17a8c4" stroke="rgba(23,168,196,0.5)" stroke-width="1"></ellipse>
+          <ellipse cx="240" cy="512" rx="4.5" ry="3" fill="#17a8c4" stroke="rgba(23,168,196,0.5)" stroke-width="1"></ellipse>
+          <ellipse cx="254" cy="516" rx="4" ry="2.5" fill="#17a8c4" stroke="rgba(23,168,196,0.4)" stroke-width="1"></ellipse>
+          <ellipse cx="267" cy="519" rx="3.5" ry="2.5" fill="#17a8c4" stroke="rgba(23,168,196,0.4)" stroke-width="1"></ellipse>
+          <ellipse cx="279" cy="521" rx="3" ry="2" fill="#17a8c4" stroke="rgba(23,168,196,0.3)" stroke-width="1"></ellipse>
+          <line x1="194" y1="490" x2="279" y2="521" stroke="rgba(23,168,196,0.25)" stroke-width="1" stroke-dasharray="3,3"></line>
+        </g>
+
+        <!-- City dots -->
+        <g filter="url(#softGlow)">
+          <!-- Miami -->
+          <circle cx="318" cy="400" r="5" fill="#c9a84c" opacity="0.9"></circle>
+          <circle cx="318" cy="400" r="9" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"></circle>
+          <text x="328" y="404" font-size="9" fill="#e8c96e" font-family="DM Sans,sans-serif" font-weight="600">Miami</text>
+
+          <!-- Tampa -->
+          <circle cx="182" cy="336" r="5" fill="#c9a84c" opacity="0.9"></circle>
+          <circle cx="182" cy="336" r="9" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"></circle>
+          <text x="116" y="340" font-size="9" fill="#e8c96e" font-family="DM Sans,sans-serif" font-weight="600">Tampa</text>
+
+          <!-- Orlando -->
+          <circle cx="256" cy="298" r="5" fill="#c9a84c" opacity="0.9"></circle>
+          <circle cx="256" cy="298" r="9" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"></circle>
+          <text x="268" y="302" font-size="9" fill="#e8c96e" font-family="DM Sans,sans-serif" font-weight="600">Orlando</text>
+
+          <!-- Jacksonville -->
+          <circle cx="296" cy="148" r="5" fill="#c9a84c" opacity="0.9"></circle>
+          <circle cx="296" cy="148" r="9" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"></circle>
+          <text x="308" y="152" font-size="9" fill="#e8c96e" font-family="DM Sans,sans-serif" font-weight="600">Jacksonville</text>
+
+          <!-- Tallahassee -->
+          <circle cx="148" cy="96" r="4" fill="#17a8c4" opacity="0.8"></circle>
+          <text x="158" y="100" font-size="8" fill="#a8d8e8" font-family="DM Sans,sans-serif">Tallahassee</text>
+        </g>
+
+        <!-- Central badge -->
+        <g transform="translate(190, 230)">
+          <rect x="-52" y="-18" width="104" height="36" rx="18" fill="rgba(10,22,40,0.75)" stroke="rgba(23,168,196,0.5)" stroke-width="1.5"></rect>
+          <text x="0" y="-4" text-anchor="middle" font-size="11" fill="#17a8c4" font-family="DM Sans,sans-serif" font-weight="700">✓ 65 COUNTIES</text>
+          <text x="0" y="11" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)" font-family="DM Sans,sans-serif">COVERED</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="quote-section" id="quote">
+  <div class="quote-wrapper reveal">
+    <h2 class="quote-title">Get Your Free Quote</h2>
+    <p class="quote-sub">No obligation. No spam. Just real rates from 30+ carriers — usually within the same business day.</p>
+
+    <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John" required="">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" required="">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@email.com" required="">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(555) 000-0000">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Property / Risk Address</label>
+        <input type="text" placeholder="123 Ocean Drive, Miami, FL 33101">
+      </div>
+
+      <div class="form-group">
+        <label>Florida County</label>
+        <select>
+          <option value="">Select your county...</option>
+          <option>Alachua</option><option>Baker</option><option>Bay</option>
+          <option>Bradford</option><option>Brevard</option><option>Broward</option>
+          <option>Calhoun</option><option>Charlotte</option><option>Citrus</option>
+          <option>Clay</option><option>Collier</option><option>Columbia</option>
+          <option>DeSoto</option><option>Dixie</option><option>Duval</option>
+          <option>Escambia</option><option>Flagler</option><option>Franklin</option>
+          <option>Gadsden</option><option>Gilchrist</option><option>Glades</option>
+          <option>Gulf</option><option>Hamilton</option><option>Hardee</option>
+          <option>Hendry</option><option>Hernando</option><option>Highlands</option>
+          <option>Hillsborough</option><option>Holmes</option><option>Indian River</option>
+          <option>Jackson</option><option>Jefferson</option><option>Lafayette</option>
+          <option>Lake</option><option>Lee</option><option>Leon</option>
+          <option>Levy</option><option>Liberty</option><option>Madison</option>
+          <option>Marion</option><option>Martin</option><option>Miami-Dade</option>
+          <option>Monroe</option><option>Nassau</option><option>Okaloosa</option>
+          <option>Okeechobee</option><option>Orange</option><option>Osceola</option>
+          <option>Palm Beach</option><option>Pasco</option><option>Pinellas</option>
+          <option>Polk</option><option>Putnam</option><option>St. Johns</option>
+          <option>St. Lucie</option><option>Santa Rosa</option><option>Sarasota</option>
+          <option>Seminole</option><option>Sumter</option><option>Suwannee</option>
+          <option>Taylor</option><option>Union</option><option>Volusia</option>
+          <option>Wakulla</option><option>Walton</option><option>Washington</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>What type of coverage do you need?</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label"><input type="checkbox"> 🏠 Homeowners</label>
+          <label class="checkbox-label"><input type="checkbox"> 🌊 Flood</label>
+          <label class="checkbox-label"><input type="checkbox"> 🏢 Commercial</label>
+          <label class="checkbox-label"><input type="checkbox"> 🌀 Wind / Hurricane</label>
+          <label class="checkbox-label"><input type="checkbox"> 🏗️ Rental Property</label>
+          <label class="checkbox-label"><input type="checkbox"> 🏖️ Condo / HO-6</label>
+          <label class="checkbox-label"><input type="checkbox"> 📦 Renters</label>
+        </div>
+      </div>
+
+      <!-- 4-POINT / WIND MIT UPLOAD -->
+      <div class="inspection-upload-box">
+        <div class="inspection-header">
+          <span class="inspection-icon">⚡</span>
+          <div>
+            <div class="inspection-title">Have a 4-Point or Wind Mitigation Inspection?</div>
+            <div class="inspection-sub">Upload it and we'll rush your homeowners quote to the front of the line — these reports can save you hundreds per year.</div>
+          </div>
+        </div>
+        <div class="upload-zone" id="uploadZone" onclick="document.getElementById(&#39;inspectionFile&#39;).click()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+          <div class="upload-icon">📄</div>
+          <div class="upload-text">Click to upload or drag &amp; drop</div>
+          <div class="upload-hint">4-Point Inspection, Wind Mitigation Report, or both · PDF, JPG, PNG accepted</div>
+          <input type="file" id="inspectionFile" accept=".pdf,.jpg,.jpeg,.png" multiple="" style="display:none" onchange="handleFileSelect(event)">
+        </div>
+        <div id="fileList" class="file-list" style="display:none"></div>
+        <div class="inspection-badge">🚀 Uploads get priority same-day quotes</div>
+      </div>
+      </form></div>
+
+      <div class="form-group">
+        <label>Anything else we should know?</label>
+        <textarea placeholder="E.g. currently with Citizens, looking to switch. Recently renovated. Need same-day quote for closing..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">🚀 Get My Free Quotes from 30+ Carriers</button>
+    
+  
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="section-label">Client Reviews</div>
+      <h2 class="section-title">Floridians Trust Us</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"After Hurricane Ian we thought we'd never find affordable coastal coverage again. FL Coastal found us a policy $1,800 cheaper than what Citizens quoted. Absolutely incredible."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div><div class="author-name">Maria R.</div><div class="author-loc">Fort Myers, Lee County</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"As a realtor I need an insurance contact who can move fast and communicate with lenders. These guys are on it every single time. My clients love the speed."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JT</div>
+          <div><div class="author-name">James T.</div><div class="author-loc">Tampa, Hillsborough County</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I own 4 rental properties in South Florida. They handle all my coverage, always find better rates at renewal, and I never have to worry about it. That's the dream."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DK</div>
+          <div><div class="author-name">David K.</div><div class="author-loc">Boca Raton, Palm Beach County</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div style="max-width:780px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Florida Insurance FAQs</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What does it mean to be an independent agent?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">An independent agent isn't locked to a single insurance company. We work with 30+ carriers and shop your policy to all of them simultaneously. That competition drives your price down — unlike a captive agent (State Farm, Allstate, etc.) who can only offer you one company's rates.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Is Florida coastal / windstorm insurance hard to find?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">It can be — many national carriers have pulled back from Florida's coastal market. But we specialize exactly in this area. We have carrier relationships specifically for high-wind zones, coastal properties, and difficult-to-insure homes that other agents struggle to place.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How fast can I get a quote?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">Most standard quotes come back same business day. For complex commercial or coastal properties, usually within 24-48 hours. If you have a closing deadline, tell us upfront — we can often accommodate rush requests.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do I need flood insurance in Florida?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">If you're in a FEMA-designated high-risk flood zone (AE, VE, etc.) and have a mortgage, it's typically required. But even outside high-risk zones, Florida's geography means flood risk is real — and homeowners insurance never covers flood damage. We can compare NFIP vs. private flood options to find the best deal.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Can you help mortgage officers and realtors with their clients?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">Absolutely — this is a core part of what we do. We communicate directly with lenders, provide binders and declarations pages fast, and make sure nothing holds up a closing. We'd love to be your go-to insurance resource for your clients.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What counties do you NOT serve?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">We currently serve 65 of 67 Florida counties. The only exception is Manatee County. If you're in any other Florida county, we're ready to help you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to Stop Overpaying for Insurance?</h2>
+  <p>Join hundreds of Florida homeowners and business owners who let us do the shopping for them.</p>
+  <a href="file:///C:/Users/Andres/Downloads/index_1.html#quote" class="btn-primary">Get My Free Quote — Takes 2 Minutes</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#" class="nav-logo" style="text-decoration:none">
+        <div class="logo-icon">🌊</div>
+        <div class="logo-text">
+          <div class="top" style="color:#f8f9fa">FL Coastal Insurance</div>
+          <div class="bottom">Independent Agency · LLC</div>
+        </div>
+      </a>
+      <p>Florida's independent insurance agency. We shop 30+ carriers across 65 counties to find you the best coverage at the lowest price. No pressure, no bias, just results.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Coverage</h4>
+      <ul>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Homeowners</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Flood Insurance</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Commercial</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Wind / Hurricane</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Rental Property</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Condo / HO-6</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#why-us">About Us</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#coverage-area">Service Area</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#faq">FAQ</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">Get a Quote</a></li>
+        <li><a href="mailto:andres@flcoastalinsurance.com">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+17542851953" class="phone-link">📞 (754) 285-1953</a></li>
+        <li><a href="mailto:andres@protectivechoice.com">📧 Quotes: andres@protectivechoice.com</a></li>
+        <li><a href="mailto:andres@flcoastalinsurance.com">🏢 Admin: andres@flcoastalinsurance.com</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#coverage-area">📍 Serving All FL (ex. Manatee)</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_1.html#quote">⏱ Same-Day Quotes</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 FL Coastal Insurance LLC. All rights reserved. Licensed Florida Insurance Agency.</p>
+    <p>
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#" style="color:var(--gray);text-decoration:none;margin-left:1.5rem">Privacy Policy</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#" style="color:var(--gray);text-decoration:none;margin-left:1.5rem">Terms of Service</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_1.html#" style="color:var(--gray);text-decoration:none;margin-left:1.5rem">License Info</a>
+    </p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="file:///C:/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.boxShadow =
+      window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.4)' : 'none';
+  });
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  // Checkbox visual feedback
+  document.querySelectorAll('.checkbox-label').forEach(label => {
+    label.querySelector('input').addEventListener('change', function() {
+      label.style.background = this.checked ? 'rgba(23,168,196,0.15)' : '';
+      label.style.borderColor = this.checked ? 'var(--aqua)' : '';
+    });
+  });
+
+  // ── FILE UPLOAD HANDLING ──
+  let selectedFiles = [];
+
+  function handleFileSelect(event) {
+    addFiles(Array.from(event.target.files));
+  }
+
+  function handleDragOver(event) {
+    event.preventDefault();
+    document.getElementById('uploadZone').classList.add('dragover');
+  }
+
+  function handleDrop(event) {
+    event.preventDefault();
+    document.getElementById('uploadZone').classList.remove('dragover');
+    addFiles(Array.from(event.dataTransfer.files));
+  }
+
+  function addFiles(newFiles) {
+    const allowed = ['application/pdf','image/jpeg','image/jpg','image/png'];
+    newFiles.forEach(f => {
+      if (!allowed.includes(f.type)) { alert(`${f.name} is not a supported file type. Please upload PDF, JPG, or PNG.`); return; }
+      if (f.size > 10 * 1024 * 1024) { alert(`${f.name} is too large. Max 10MB per file.`); return; }
+      if (!selectedFiles.find(x => x.name === f.name)) selectedFiles.push(f);
+    });
+    renderFileList();
+  }
+
+  function removeFile(name) {
+    selectedFiles = selectedFiles.filter(f => f.name !== name);
+    renderFileList();
+  }
+
+  function renderFileList() {
+    const list = document.getElementById('fileList');
+    if (selectedFiles.length === 0) { list.style.display = 'none'; return; }
+    list.style.display = 'flex';
+    list.innerHTML = selectedFiles.map(f => `
+      <div class="file-item">
+        <span>📄 ${f.name} <span style="color:var(--gray);font-size:0.7rem">(${(f.size/1024).toFixed(0)} KB)</span></span>
+        <span class="file-remove" onclick="removeFile('${f.name}')">×</span>
+      </div>
+    `).join('');
+    // Update upload zone text
+    document.querySelector('.upload-text').textContent = `${selectedFiles.length} file${selectedFiles.length>1?'s':''} selected — click to add more`;
+  }
+
+  // ── FORM SUBMIT via Formspree ──
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = '⏳ Sending your request...';
+    btn.disabled = true;
+
+    const form = document.getElementById('quoteForm');
+    const data = new FormData(form);
+
+    // Make sure Formspree routes to Andres
+    data.append('_replyto', 'andres@protectivechoice.com');
+    data.append('_subject', selectedFiles.length > 0
+      ? '🚀 PRIORITY QUOTE REQUEST — Inspection Reports Attached'
+      : 'New Quote Request — FL Coastal Insurance');
+
+    // Attach inspection files
+    selectedFiles.forEach(file => {
+      data.append('inspection_files', file, file.name);
+    });
+
+    // Append checkbox selections as readable text
+    const checked = [...document.querySelectorAll('.checkbox-label input:checked')]
+      .map(i => i.parentElement.textContent.trim()).join(', ');
+    data.append('coverage_requested', checked || 'Not specified');
+    data.append('has_inspection_reports', selectedFiles.length > 0 ? 'YES — ' + selectedFiles.map(f=>f.name).join(', ') : 'No');
+
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      if (res.ok) {
+        btn.textContent = selectedFiles.length > 0
+          ? '✅ Priority Request Sent! We\'ll rush your quote.'
+          : '✅ Request Received! We\'ll be in touch shortly.';
+        btn.style.background = 'linear-gradient(135deg, #17a8c4, #2e86c1)';
+        btn.style.color = 'white';
+      } e</script></body></html>
