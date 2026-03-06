@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)file:///C:/Users/Andres/Downloads/index_19.html -->
+<!-- saved from url=(0047)file:///C:/Users/Andres/Downloads/index_20.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,19 +46,43 @@ body:hover #cursor{opacity:1}
 /* ── NAV ─────────────────────────────────────────────── */
 #nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 2.5rem;transition:all 0.4s ease}
 #nav.scrolled{background:rgba(250,248,244,0.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+/* Logo — light on dark hero, dark when scrolled */
+#nav .logo-name{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:-0.01em;color:rgba(245,243,239,0.95);transition:color 0.4s ease}
+#nav .logo-sub{font-size:0.6rem;color:rgba(245,243,239,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-top:1px;font-family:'Syne',sans-serif;transition:color 0.4s ease}
+#nav.scrolled .logo-name{color:var(--ink)}
+#nav.scrolled .logo-sub{color:var(--muted)}
+/* Logo icon — light border on dark, dark on light */
+#nav .logo-icon{background:rgba(245,243,239,0.15);border:1px solid rgba(245,243,239,0.2);transition:all 0.4s ease}
+#nav.scrolled .logo-icon{background:var(--ink);border-color:transparent}
+/* Nav links — light on dark hero, dark when scrolled */
+#nav .nav-links a,#nav .nav-links button{color:rgba(245,243,239,0.65);transition:all 0.2s ease}
+#nav .nav-links a:hover,#nav .nav-links button:hover{color:rgba(245,243,239,0.95);background:rgba(245,243,239,0.08)}
+#nav.scrolled .nav-links a,#nav.scrolled .nav-links button{color:var(--muted)}
+#nav.scrolled .nav-links a:hover,#nav.scrolled .nav-links button:hover{color:var(--text);background:var(--surface2)}
+/* CTA button — outlined on dark, solid on light */
+#nav .nav-cta{background:rgba(245,243,239,0.1)!important;color:rgba(245,243,239,0.9)!important;border:1px solid rgba(245,243,239,0.2)!important;border-radius:9px!important;padding:0.5rem 1.1rem!important;font-weight:500!important;transition:all 0.3s ease!important}
+#nav .nav-cta:hover{background:rgba(245,243,239,0.18)!important;border-color:rgba(245,243,239,0.35)!important}
+#nav.scrolled .nav-cta{background:var(--ink)!important;color:var(--cream)!important;border-color:transparent!important}
+#nav.scrolled .nav-cta:hover{background:var(--ink2)!important;transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,0.2)!important}
+/* Hamburger — light on dark */
+#nav .hamburger span{background:rgba(245,243,239,0.85);transition:background 0.4s ease}
+#nav.scrolled .hamburger span{background:var(--text)}
 .nav-inner{max-width:1280px;margin:0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .nav-logo{display:flex;align-items:center;gap:0.75rem}
-.logo-icon{width:34px;height:34px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo-icon svg{width:18px;height:18px}
-.logo-name{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:-0.01em;color:var(--ink)}
-.logo-sub{font-size:0.6rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-top:1px;font-family:'Syne',sans-serif}
 .nav-links{display:flex;align-items:center;gap:0.25rem;list-style:none}
-.nav-links a,.nav-links button{font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:400;color:var(--muted);background:none;border:none;padding:0.5rem 0.85rem;border-radius:8px;transition:all 0.2s ease;white-space:nowrap;display:flex;align-items:center;gap:0.3rem}
-.nav-links a:hover,.nav-links button:hover{color:var(--text);background:var(--surface2)}
+.nav-links a,.nav-links button{font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:400;background:none;border:none;padding:0.5rem 0.85rem;border-radius:8px;transition:all 0.2s ease;white-space:nowrap;display:flex;align-items:center;gap:0.3rem}
 .nav-links>li{position:relative}
-.nav-links>li.open>button{color:var(--text);background:var(--surface2)}
+.nav-links>li.open>button{background:rgba(245,243,239,0.08)}
+#nav.scrolled .nav-links>li.open>button{background:var(--surface2)}
 .chevron{font-size:0.55rem;transition:transform 0.2s ease;opacity:0.6}
 .nav-links>li.open .chevron{transform:rotate(180deg)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:0.4rem;border-radius:7px}
+.hamburger span{display:block;width:22px;height:1.5px;border-radius:2px;transition:all 0.3s ease}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 .dropdown{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);background:var(--white);border:1px solid var(--border);border-radius:14px;padding:0.5rem;min-width:240px;opacity:0;visibility:hidden;transition:all 0.2s ease;box-shadow:var(--shadow-lg);pointer-events:none}
 .nav-links>li.open .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:all}
 .dropdown a{display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.9rem;border-radius:9px;font-size:0.84rem;color:var(--muted);transition:all 0.15s ease}
@@ -401,13 +425,13 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <body>
 
 <!-- CURSOR -->
-<div id="cursor" style="left: 503px; top: 345px;"></div>
-<div id="cursor-ring" style="left: 465.675px; top: 395.803px;"></div>
+<div id="cursor" style="left: 518px; top: 299px;"></div>
+<div id="cursor-ring" style="left: 518px; top: 299px;"></div>
 
 <!-- NAV -->
-<nav id="nav" class="">
+<nav id="nav" class="scrolled">
   <div class="nav-inner">
-    <a href="file:///C:/Users/Andres/Downloads/index_19.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
+    <a href="file:///C:/Users/Andres/Downloads/index_20.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
       <div class="logo-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v5c0 5.25 3.5 10.15 8 11.5C16.5 22.15 20 17.25 20 12V7L12 2z"></path></svg>
       </div>
@@ -421,26 +445,26 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       <li id="dd1">
         <button onclick="toggleDD(&#39;dd1&#39;)">Coverage <span class="chevron">▾</span></button>
         <div class="dropdown">
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏠</div><div><span class="d-title">Homeowners</span><span class="d-sub">HO-3, HO-6, luxury homes</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌊</div><div><span class="d-title">Flood Insurance</span><span class="d-sub">NFIP &amp; private options</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌀</div><div><span class="d-title">Wind &amp; Hurricane</span><span class="d-sub">Coastal specialists</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏠</div><div><span class="d-title">Homeowners</span><span class="d-sub">HO-3, HO-6, luxury homes</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌊</div><div><span class="d-title">Flood Insurance</span><span class="d-sub">NFIP &amp; private options</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌀</div><div><span class="d-title">Wind &amp; Hurricane</span><span class="d-sub">Coastal specialists</span></div></a>
           <div class="dd-div"></div>
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏢</div><div><span class="d-title">Commercial</span><span class="d-sub">BOP, liability, property</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏗️</div><div><span class="d-title">Rental / Landlord</span><span class="d-sub">DP-1, DP-3, investment</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏖️</div><div><span class="d-title">Condo HO-6</span><span class="d-sub">Unit owners &amp; associations</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏢</div><div><span class="d-title">Commercial</span><span class="d-sub">BOP, liability, property</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏗️</div><div><span class="d-title">Rental / Landlord</span><span class="d-sub">DP-1, DP-3, investment</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏖️</div><div><span class="d-title">Condo HO-6</span><span class="d-sub">Unit owners &amp; associations</span></div></a>
         </div>
       </li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#why" onclick="navGo(&#39;#why&#39;)">Why Us</a></li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#why" onclick="navGo(&#39;#why&#39;)">Why Us</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
       <li id="dd2">
         <button onclick="toggleDD(&#39;dd2&#39;)">Partners <span class="chevron">▾</span></button>
         <div class="dropdown">
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏡</div><div><span class="d-title">Realtors</span><span class="d-sub">Fast binders for closings</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_19.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏦</div><div><span class="d-title">Mortgage Officers</span><span class="d-sub">Lender-ready docs</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏡</div><div><span class="d-title">Realtors</span><span class="d-sub">Fast binders for closings</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_20.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏦</div><div><span class="d-title">Mortgage Officers</span><span class="d-sub">Lender-ready docs</span></div></a>
         </div>
       </li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#quote" class="nav-cta" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#quote" class="nav-cta" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
     </ul>
 
     <button class="hamburger" id="hbtn" onclick="toggleMobile()" aria-label="Menu">
@@ -451,19 +475,19 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 
 <!-- MOBILE MENU -->
 <div id="mmenu">
-  <a href="file:///C:/Users/Andres/Downloads/index_19.html#services" class="mob-item" onclick="mobNav(&#39;#services&#39;)">Coverage</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_19.html#why" class="mob-item" onclick="mobNav(&#39;#why&#39;)">Why Us</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_19.html#coverage" class="mob-item" onclick="mobNav(&#39;#coverage&#39;)">Service Area</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_19.html#faq" class="mob-item" onclick="mobNav(&#39;#faq&#39;)">FAQ</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_20.html#services" class="mob-item" onclick="mobNav(&#39;#services&#39;)">Coverage</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_20.html#why" class="mob-item" onclick="mobNav(&#39;#why&#39;)">Why Us</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_20.html#coverage" class="mob-item" onclick="mobNav(&#39;#coverage&#39;)">Service Area</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_20.html#faq" class="mob-item" onclick="mobNav(&#39;#faq&#39;)">FAQ</a>
   <a href="tel:+17542851953" class="mob-item" onclick="closeMobile()" style="font-family:&#39;DM Sans&#39;,sans-serif;font-size:1.1rem;font-weight:400">(754) 285-1953</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_19.html#quote" class="mob-cta-btn" onclick="mobNav(&#39;#quote&#39;)">Get Free Quote →</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_20.html#quote" class="mob-cta-btn" onclick="mobNav(&#39;#quote&#39;)">Get Free Quote →</a>
 </div>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-noise"></div>
   <div class="hero-bg-gradient"></div>
-  <canvas id="heroCanvas" width="1507" height="907"></canvas>
+  <canvas id="heroCanvas" width="2548" height="1316"></canvas>
 
   <div class="hero-content">
     <div class="hero-left">
@@ -479,7 +503,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       </h1>
       <p class="hero-subtext" id="heroSub">We do the heavy lifting — comparing top-rated Florida carriers to find you the best coverage at the lowest rate. <strong>66 counties. Zero pressure.</strong></p>
       <div class="hero-actions" id="heroActions">
-        <a href="file:///C:/Users/Andres/Downloads/index_19.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)">
+        <a href="file:///C:/Users/Andres/Downloads/index_20.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)">
           Get My Free Quote
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
         </a>
@@ -581,35 +605,35 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <!-- WHY US -->
 <section class="section" id="why">
   <div class="si">
-    <div class="section-header reveal vis">
+    <div class="section-header reveal hidden-before-reveal">
       <div class="section-label"><div class="label-line"></div><span>Why FL Coastal</span></div>
       <h2 class="section-title">The Independent<br><em>Advantage</em></h2>
       <p class="section-sub">Unlike captive agents locked to one company, we shop 30+ carriers — creating real competition for your business.</p>
     </div>
     <div class="why-grid">
-      <div class="why-item vis">
+      <div class="why-item hidden-before-reveal">
         <div class="why-num">01</div>
         <div class="why-h">30+ Carriers, One Call</div>
         <p class="why-p">We compare quotes from 30+ top-rated Florida carriers simultaneously — the best rate without the runaround.</p>
       </div>
-      <div class="why-item vis">
+      <div class="why-item hidden-before-reveal">
         <div class="why-num">02</div>
         <div class="why-h">Coastal Specialists</div>
         <p class="why-p">Wind mitigation credits, Citizens alternatives, flood zones — we navigate Florida's complex market daily.</p>
       </div>
-      <div class="why-item vis">
+      <div class="why-item hidden-before-reveal">
         <div class="why-num">03</div>
         <div class="why-h">Fast &amp; No Pressure</div>
         <p class="why-p">Real quotes fast. Honest recommendations. Zero pressure to buy. Your timeline, your decision, always.</p>
       </div>
-      <div class="why-item vis">
+      <div class="why-item hidden-before-reveal">
         <div class="why-num">04</div>
         <div class="why-h">Licensed Independent</div>
         <p class="why-p">Fully licensed Florida insurance agency. We work for you — not the carriers — 100% of the time.</p>
       </div>
     </div>
 
-    <div class="why-partner reveal vis">
+    <div class="why-partner reveal hidden-before-reveal">
       <div>
         <div class="section-label" style="margin-bottom:0.75rem"><div class="label-line" style="background:var(--gold2)"></div><span style="color:rgba(245,243,239,0.4)">For Professionals</span></div>
         <div class="why-partner-h">Realtors &amp; Mortgage Officers</div>
@@ -618,15 +642,15 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       </div>
       <div class="why-partner-nums">
         <div class="wpn">
-          <div class="wpn-n" data-target="30" data-suffix="+">30+</div>
+          <div class="wpn-n" data-target="30" data-suffix="+">0+</div>
           <div class="wpn-l">Carrier Relationships</div>
         </div>
         <div class="wpn">
-          <div class="wpn-n" data-target="66" data-suffix="">66</div>
+          <div class="wpn-n" data-target="66" data-suffix="">0</div>
           <div class="wpn-l">Counties Covered</div>
         </div>
         <div class="wpn">
-          <div class="wpn-n" data-target="100" data-suffix="%">100%</div>
+          <div class="wpn-n" data-target="100" data-suffix="%">0%</div>
           <div class="wpn-l">Independent</div>
         </div>
       </div>
@@ -637,24 +661,24 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <!-- PROCESS -->
 <section class="section" id="process">
   <div class="si">
-    <div class="section-header reveal vis">
+    <div class="section-header reveal hidden-before-reveal">
       <div class="section-label"><div class="label-line"></div><span>How It Works</span></div>
       <h2 class="section-title">Covered in<br><em>3 Steps</em></h2>
     </div>
     <div class="process-steps">
-      <div class="pstep vis" style="transition-delay:0s">
+      <div class="pstep hidden-before-reveal" style="transition-delay:0s">
         <div class="pstep-n">01</div>
         <h4>Tell Us What You Need</h4>
         <p>Fill out our simple form or call us. Takes under 2 minutes. No jargon, no pressure.</p>
         <div class="pstep-connector">→</div>
       </div>
-      <div class="pstep vis" style="transition-delay:0.1s">
+      <div class="pstep hidden-before-reveal" style="transition-delay:0.1s">
         <div class="pstep-n">02</div>
         <h4>We Shop 30+ Carriers</h4>
         <p>We compare every carrier simultaneously on your behalf. Full market access, one call.</p>
         <div class="pstep-connector">→</div>
       </div>
-      <div class="pstep vis" style="transition-delay:0.2s">
+      <div class="pstep hidden-before-reveal" style="transition-delay:0.2s">
         <div class="pstep-n">03</div>
         <h4>You Pick, We Bind</h4>
         <p>Choose the best option. We handle all the paperwork and deliver your policy fast.</p>
@@ -668,29 +692,29 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
   <div class="si">
     <div class="cov-layout">
       <div>
-        <div class="section-header reveal vis">
+        <div class="section-header reveal hidden-before-reveal">
           <div class="section-label"><div class="label-line"></div><span>Service Area</span></div>
           <h2 class="section-title">Serving All<br>of <em>Florida</em></h2>
           <p class="section-sub">Licensed in 66 of 67 Florida counties — from Pensacola to Key West.</p>
         </div>
-        <div class="county-search-wrap reveal vis">
+        <div class="county-search-wrap reveal hidden-before-reveal">
           <span class="county-search-icon">🔍</span>
           <input type="text" class="county-search" id="csearch" placeholder="Search a county..." oninput="filterCounties(this.value)">
         </div>
-        <div class="counties-box reveal vis">
+        <div class="counties-box reveal hidden-before-reveal">
           <div class="counties-flow" id="cflow"><span class="cpill" data-c="alachua">Alachua</span><span class="cpill" data-c="baker">Baker</span><span class="cpill" data-c="bay">Bay</span><span class="cpill" data-c="bradford">Bradford</span><span class="cpill" data-c="brevard">Brevard</span><span class="cpill" data-c="broward">Broward</span><span class="cpill" data-c="calhoun">Calhoun</span><span class="cpill" data-c="charlotte">Charlotte</span><span class="cpill" data-c="citrus">Citrus</span><span class="cpill" data-c="clay">Clay</span><span class="cpill" data-c="collier">Collier</span><span class="cpill" data-c="columbia">Columbia</span><span class="cpill" data-c="desoto">DeSoto</span><span class="cpill" data-c="dixie">Dixie</span><span class="cpill" data-c="duval">Duval</span><span class="cpill" data-c="escambia">Escambia</span><span class="cpill" data-c="flagler">Flagler</span><span class="cpill" data-c="franklin">Franklin</span><span class="cpill" data-c="gadsden">Gadsden</span><span class="cpill" data-c="gilchrist">Gilchrist</span><span class="cpill" data-c="glades">Glades</span><span class="cpill" data-c="gulf">Gulf</span><span class="cpill" data-c="hamilton">Hamilton</span><span class="cpill" data-c="hardee">Hardee</span><span class="cpill" data-c="hendry">Hendry</span><span class="cpill" data-c="hernando">Hernando</span><span class="cpill" data-c="highlands">Highlands</span><span class="cpill" data-c="hillsborough">Hillsborough</span><span class="cpill" data-c="holmes">Holmes</span><span class="cpill" data-c="indian river">Indian River</span><span class="cpill" data-c="jackson">Jackson</span><span class="cpill" data-c="jefferson">Jefferson</span><span class="cpill" data-c="lafayette">Lafayette</span><span class="cpill" data-c="lake">Lake</span><span class="cpill" data-c="lee">Lee</span><span class="cpill" data-c="leon">Leon</span><span class="cpill" data-c="levy">Levy</span><span class="cpill" data-c="liberty">Liberty</span><span class="cpill" data-c="madison">Madison</span><span class="cpill" data-c="marion">Marion</span><span class="cpill" data-c="martin">Martin</span><span class="cpill" data-c="miami-dade">Miami-Dade</span><span class="cpill" data-c="monroe">Monroe</span><span class="cpill" data-c="nassau">Nassau</span><span class="cpill" data-c="okaloosa">Okaloosa</span><span class="cpill" data-c="okeechobee">Okeechobee</span><span class="cpill" data-c="orange">Orange</span><span class="cpill" data-c="osceola">Osceola</span><span class="cpill" data-c="palm beach">Palm Beach</span><span class="cpill" data-c="pasco">Pasco</span><span class="cpill" data-c="pinellas">Pinellas</span><span class="cpill" data-c="polk">Polk</span><span class="cpill" data-c="putnam">Putnam</span><span class="cpill" data-c="st. johns">St. Johns</span><span class="cpill" data-c="st. lucie">St. Lucie</span><span class="cpill" data-c="santa rosa">Santa Rosa</span><span class="cpill" data-c="sarasota">Sarasota</span><span class="cpill" data-c="seminole">Seminole</span><span class="cpill" data-c="sumter">Sumter</span><span class="cpill" data-c="suwannee">Suwannee</span><span class="cpill" data-c="taylor">Taylor</span><span class="cpill" data-c="union">Union</span><span class="cpill" data-c="volusia">Volusia</span><span class="cpill" data-c="wakulla">Wakulla</span><span class="cpill" data-c="walton">Walton</span><span class="cpill" data-c="washington">Washington</span></div>
         </div>
-        <div class="excl-box reveal vis" style="margin-top:0.85rem">
+        <div class="excl-box reveal hidden-before-reveal" style="margin-top:0.85rem">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
           <div><div class="excl-lbl">Not Currently Served</div><div style="font-size:0.82rem;color:var(--muted)">Manatee County</div></div>
         </div>
-        <a href="file:///C:/Users/Andres/Downloads/index_19.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)" style="margin-top:2rem;display:inline-flex">
+        <a href="file:///C:/Users/Andres/Downloads/index_20.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)" style="margin-top:2rem;display:inline-flex">
           Check My Area
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
         </a>
       </div>
       <div>
-        <div class="coverage-card reveal vis">
+        <div class="coverage-card reveal hidden-before-reveal">
           <div class="coverage-card-header">
             <div class="section-label" style="margin-bottom:0.5rem"><div class="label-line" style="background:var(--gold2)"></div><span style="color:rgba(245,243,239,0.4)">Coverage by Region</span></div>
             <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.3rem;font-weight:700;color:var(--cream)">66 of 67 Florida Counties</div>
@@ -808,7 +832,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
     <div class="review-placeholder reveal hidden-before-reveal">
       <div class="review-placeholder-icon">⭐</div>
       <p>We're just getting started — and we'd love to hear from you.<br>Be the first to share your experience with FL Coastal Insurance.</p>
-      <a href="file:///C:/Users/Andres/Downloads/index_19.html#leave-review" onclick="document.getElementById(&#39;review-form-card&#39;).scrollIntoView({behavior:&#39;smooth&#39;});return false;" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-family:&#39;Syne&#39;,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none">Leave a Review →</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_20.html#leave-review" onclick="document.getElementById(&#39;review-form-card&#39;).scrollIntoView({behavior:&#39;smooth&#39;});return false;" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-family:&#39;Syne&#39;,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none">Leave a Review →</a>
     </div>
     <div class="review-form-card reveal hidden-before-reveal" id="review-form-card">
       <div style="text-align:center;margin-bottom:1.75rem">
@@ -867,7 +891,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <div id="cta-band">
   <h2>Ready to Stop Overpaying?</h2>
   <p>Join Florida homeowners and businesses who let us do the shopping.</p>
-  <a href="file:///C:/Users/Andres/Downloads/index_19.html#quote" class="btn-dark" onclick="navGo(&#39;#quote&#39;)">
+  <a href="file:///C:/Users/Andres/Downloads/index_20.html#quote" class="btn-dark" onclick="navGo(&#39;#quote&#39;)">
     Get My Free Quote — Takes 2 Minutes
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
   </a>
@@ -877,7 +901,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <footer>
   <div class="fgrid">
     <div class="fbrand">
-      <a href="file:///C:/Users/Andres/Downloads/index_19.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
+      <a href="file:///C:/Users/Andres/Downloads/index_20.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
         <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v5c0 5.25 3.5 10.15 8 11.5C16.5 22.15 20 17.25 20 12V7L12 2z"></path></svg></div>
         <div><div class="logo-name" style="color:rgba(245,243,239,0.85)">FL Coastal Insurance</div><div class="logo-sub">Independent Agency · LLC</div></div>
       </a>
@@ -886,21 +910,21 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
     <div class="fcol">
       <h4>Coverage</h4>
       <ul>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)">Homeowners</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)">Flood Insurance</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)">Wind / Hurricane</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)">Commercial</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)">Rental Property</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#services" onclick="navGo(&#39;#services&#39;)">Condo / HO-6</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)">Homeowners</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)">Flood Insurance</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)">Wind / Hurricane</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)">Commercial</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)">Rental Property</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#services" onclick="navGo(&#39;#services&#39;)">Condo / HO-6</a></li>
       </ul>
     </div>
     <div class="fcol">
       <h4>Company</h4>
       <ul>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#why" onclick="navGo(&#39;#why&#39;)">About Us</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#quote" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#why" onclick="navGo(&#39;#why&#39;)">About Us</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#quote" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
         <li><a href="file:///C:/cdn-cgi/l/email-protection#1776797365726457676578637274637e6172747f787e74723974787a" class="alink">Contact</a></li>
       </ul>
     </div>
@@ -909,16 +933,16 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       <ul>
         <li><a href="tel:+17542851953" class="alink">📞 (754) 285-1953</a></li>
         <li><a href="file:///C:/cdn-cgi/l/email-protection#10717e746275635060627f6475736479667573787f7973753e737f7d" class="alink">✉️ Quotes Email</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_19.html#coverage" onclick="navGo(&#39;#coverage&#39;)">📍 All FL except Manatee</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_20.html#coverage" onclick="navGo(&#39;#coverage&#39;)">📍 All FL except Manatee</a></li>
       </ul>
     </div>
   </div>
   <div class="fbot">
     <p>© 2025 FL Coastal Insurance LLC. All rights reserved. Licensed Florida Insurance Agency.</p>
     <div class="fbot-links">
-      <a href="file:///C:/Users/Andres/Downloads/index_19.html#">Privacy Policy</a>
-      <a href="file:///C:/Users/Andres/Downloads/index_19.html#">Terms</a>
-      <a href="file:///C:/Users/Andres/Downloads/index_19.html#">License Info</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_20.html#">Privacy Policy</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_20.html#">Terms</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_20.html#">License Info</a>
     </div>
   </div>
 </footer>
