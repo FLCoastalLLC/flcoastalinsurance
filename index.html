@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)file:///C:/Users/Andres/Downloads/index_17.html -->
+<!-- saved from url=(0047)file:///C:/Users/Andres/Downloads/index_18.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,12 +84,12 @@ body:hover #cursor{opacity:1}
 .mob-cta-btn:hover{background:var(--ink2)}
 
 /* ── HERO ────────────────────────────────────────────── */
-#hero{min-height:100vh;background:var(--ink);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 0}
+#hero{min-height:100vh;background:var(--ink);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:0}
 .hero-noise{position:absolute;inset:0;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:200px;pointer-events:none}
 .hero-bg-gradient{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 70% 30%,rgba(14,122,138,0.18) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(184,147,58,0.1) 0%,transparent 55%);pointer-events:none}
 canvas#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.6}
 
-.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;padding:8rem 2.5rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;padding:6rem 2.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .hero-left{}
 .hero-eyebrow{display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;opacity:0}
 .eyebrow-line{width:32px;height:1px;background:var(--gold)}
@@ -97,7 +97,7 @@ canvas#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-event
 .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,6.5vw,6.5rem);font-weight:900;line-height:0.97;letter-spacing:-0.03em;color:var(--cream);margin-bottom:2rem;opacity:0}
 .hero-h1 em{font-style:italic;color:var(--gold3)}
 .hero-h1 .hero-h1-line{display:block;overflow:hidden}
-.hero-h1 .hero-h1-inner{display:block;transform:translateY(110%)}
+.hero-h1 .hero-h1-inner{display:block}
 .hero-subtext{font-size:1rem;color:rgba(245,243,239,0.55);line-height:1.75;font-weight:300;max-width:420px;margin-bottom:2.5rem;opacity:0;font-family:'DM Sans',sans-serif}
 .hero-subtext strong{color:rgba(245,243,239,0.85);font-weight:400}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;opacity:0}
@@ -328,31 +328,35 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 .fbot-links a:hover{color:rgba(245,243,239,0.55)}
 
 /* ── ANIMATIONS ──────────────────────────────────────── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slideUp{from{transform:translateY(110%)}to{transform:translateY(0)}}
-@keyframes slideRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
-
-/* Hero animations — pure CSS, no JS required */
-#heroEyebrow{animation:fadeUp 0.7s 0.2s ease both}
-.hero-h1-inner{animation:slideUp 0.85s ease both}
-.hero-h1-line:nth-child(1) .hero-h1-inner{animation-delay:0.4s}
-.hero-h1-line:nth-child(2) .hero-h1-inner{animation-delay:0.52s}
-.hero-h1-line:nth-child(3) .hero-h1-inner{animation-delay:0.64s}
-.hero-h1-line:nth-child(4) .hero-h1-inner{animation-delay:0.76s}
-#heroSub{animation:fadeUp 0.7s 0.9s ease both}
-#heroActions{animation:fadeUp 0.7s 1.1s ease both}
-#heroRight{animation:slideRight 0.9s 0.8s ease both}
-
-/* Scroll reveals — start hidden, IntersectionObserver adds .vis */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
+/* EVERYTHING IS VISIBLE BY DEFAULT — JS adds animation after DOM ready */
+.reveal{opacity:1;transform:none;transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.hidden-before-reveal{opacity:0;transform:translateY(24px)}
 .reveal.vis{opacity:1;transform:translateY(0)}
-.bento-card{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease,box-shadow 0.3s ease,border-color 0.3s ease}
+
+.bento-card{opacity:1;transform:none;transition:opacity 0.55s ease,transform 0.55s ease,box-shadow 0.3s ease,border-color 0.3s ease}
+.bento-card.hidden-before-reveal{opacity:0;transform:translateY(28px)}
 .bento-card.vis{opacity:1;transform:translateY(0)}
-.why-item{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease,background 0.3s ease}
+
+.why-item{opacity:1;transform:none;transition:opacity 0.5s ease,transform 0.5s ease,background 0.3s ease}
+.why-item.hidden-before-reveal{opacity:0;transform:translateY(16px)}
 .why-item.vis{opacity:1;transform:translateY(0)}
-.pstep{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease,box-shadow 0.3s ease}
+
+.pstep{opacity:1;transform:none;transition:opacity 0.5s ease,transform 0.5s ease,box-shadow 0.3s ease}
+.pstep.hidden-before-reveal{opacity:0;transform:translateY(20px)}
 .pstep.vis{opacity:1;transform:translateY(0)}
+
+/* Hero — always visible, no JS dependency */
+#heroEyebrow{opacity:1;transform:none;animation:fadeUp 0.6s 0.1s ease both}
+#heroH1{opacity:1}
+.hero-h1-inner{display:block;animation:slideUp 0.7s ease both}
+.hero-h1-line:nth-child(1) .hero-h1-inner{animation-delay:0.15s}
+.hero-h1-line:nth-child(2) .hero-h1-inner{animation-delay:0.25s}
+.hero-h1-line:nth-child(3) .hero-h1-inner{animation-delay:0.35s}
+.hero-h1-line:nth-child(4) .hero-h1-inner{animation-delay:0.45s}
+#heroSub{opacity:1;animation:fadeUp 0.6s 0.5s ease both}
+#heroActions{opacity:1;animation:fadeUp 0.6s 0.65s ease both}
+#heroRight{opacity:1;animation:fadeUp 0.6s 0.4s ease both}
+@keyframes slideUp{from{transform:translateY(80%);opacity:0}to{transform:translateY(0);opacity:1}}
 
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media(max-width:1024px){
@@ -375,7 +379,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
   #cursor,#cursor-ring{display:none}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
-  .hero-content{padding:7rem 1.5rem 4rem}
+  .hero-content{padding:5rem 1.5rem 2.5rem}
   .hero-h1{font-size:clamp(2.8rem,10vw,4.5rem)}
   .section{padding:5rem 1.5rem}
   .bento-card.span-4,.bento-card.span-6,.bento-card.span-8{grid-column:span 12}
@@ -397,13 +401,13 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <body>
 
 <!-- CURSOR -->
-<div id="cursor" style="left: 589px; top: 434px;"></div>
-<div id="cursor-ring" style="left: 589px; top: 434px;"></div>
+<div id="cursor" style="left: 520px; top: 869px;"></div>
+<div id="cursor-ring" style="left: 520px; top: 869px;"></div>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" class="">
   <div class="nav-inner">
-    <a href="file:///C:/Users/Andres/Downloads/index_17.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
+    <a href="file:///C:/Users/Andres/Downloads/index_18.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
       <div class="logo-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v5c0 5.25 3.5 10.15 8 11.5C16.5 22.15 20 17.25 20 12V7L12 2z"></path></svg>
       </div>
@@ -417,26 +421,26 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       <li id="dd1">
         <button onclick="toggleDD(&#39;dd1&#39;)">Coverage <span class="chevron">▾</span></button>
         <div class="dropdown">
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏠</div><div><span class="d-title">Homeowners</span><span class="d-sub">HO-3, HO-6, luxury homes</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌊</div><div><span class="d-title">Flood Insurance</span><span class="d-sub">NFIP &amp; private options</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌀</div><div><span class="d-title">Wind &amp; Hurricane</span><span class="d-sub">Coastal specialists</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏠</div><div><span class="d-title">Homeowners</span><span class="d-sub">HO-3, HO-6, luxury homes</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌊</div><div><span class="d-title">Flood Insurance</span><span class="d-sub">NFIP &amp; private options</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🌀</div><div><span class="d-title">Wind &amp; Hurricane</span><span class="d-sub">Coastal specialists</span></div></a>
           <div class="dd-div"></div>
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏢</div><div><span class="d-title">Commercial</span><span class="d-sub">BOP, liability, property</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏗️</div><div><span class="d-title">Rental / Landlord</span><span class="d-sub">DP-1, DP-3, investment</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏖️</div><div><span class="d-title">Condo HO-6</span><span class="d-sub">Unit owners &amp; associations</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏢</div><div><span class="d-title">Commercial</span><span class="d-sub">BOP, liability, property</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏗️</div><div><span class="d-title">Rental / Landlord</span><span class="d-sub">DP-1, DP-3, investment</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)"><div class="d-icon">🏖️</div><div><span class="d-title">Condo HO-6</span><span class="d-sub">Unit owners &amp; associations</span></div></a>
         </div>
       </li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#why" onclick="navGo(&#39;#why&#39;)">Why Us</a></li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#why" onclick="navGo(&#39;#why&#39;)">Why Us</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
       <li id="dd2">
         <button onclick="toggleDD(&#39;dd2&#39;)">Partners <span class="chevron">▾</span></button>
         <div class="dropdown">
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏡</div><div><span class="d-title">Realtors</span><span class="d-sub">Fast binders for closings</span></div></a>
-          <a href="file:///C:/Users/Andres/Downloads/index_17.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏦</div><div><span class="d-title">Mortgage Officers</span><span class="d-sub">Lender-ready docs</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏡</div><div><span class="d-title">Realtors</span><span class="d-sub">Fast binders for closings</span></div></a>
+          <a href="file:///C:/Users/Andres/Downloads/index_18.html#why" onclick="navGo(&#39;#why&#39;)"><div class="d-icon">🏦</div><div><span class="d-title">Mortgage Officers</span><span class="d-sub">Lender-ready docs</span></div></a>
         </div>
       </li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
-      <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#quote" class="nav-cta" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
+      <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#quote" class="nav-cta" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
     </ul>
 
     <button class="hamburger" id="hbtn" onclick="toggleMobile()" aria-label="Menu">
@@ -447,12 +451,12 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 
 <!-- MOBILE MENU -->
 <div id="mmenu">
-  <a href="file:///C:/Users/Andres/Downloads/index_17.html#services" class="mob-item" onclick="mobNav(&#39;#services&#39;)">Coverage</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_17.html#why" class="mob-item" onclick="mobNav(&#39;#why&#39;)">Why Us</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_17.html#coverage" class="mob-item" onclick="mobNav(&#39;#coverage&#39;)">Service Area</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_17.html#faq" class="mob-item" onclick="mobNav(&#39;#faq&#39;)">FAQ</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_18.html#services" class="mob-item" onclick="mobNav(&#39;#services&#39;)">Coverage</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_18.html#why" class="mob-item" onclick="mobNav(&#39;#why&#39;)">Why Us</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_18.html#coverage" class="mob-item" onclick="mobNav(&#39;#coverage&#39;)">Service Area</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_18.html#faq" class="mob-item" onclick="mobNav(&#39;#faq&#39;)">FAQ</a>
   <a href="tel:+17542851953" class="mob-item" onclick="closeMobile()" style="font-family:&#39;DM Sans&#39;,sans-serif;font-size:1.1rem;font-weight:400">(754) 285-1953</a>
-  <a href="file:///C:/Users/Andres/Downloads/index_17.html#quote" class="mob-cta-btn" onclick="mobNav(&#39;#quote&#39;)">Get Free Quote →</a>
+  <a href="file:///C:/Users/Andres/Downloads/index_18.html#quote" class="mob-cta-btn" onclick="mobNav(&#39;#quote&#39;)">Get Free Quote →</a>
 </div>
 
 <!-- HERO -->
@@ -475,7 +479,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       </h1>
       <p class="hero-subtext" id="heroSub">We do the heavy lifting — comparing top-rated Florida carriers to find you the best coverage at the lowest rate. <strong>66 counties. Zero pressure.</strong></p>
       <div class="hero-actions" id="heroActions">
-        <a href="file:///C:/Users/Andres/Downloads/index_17.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)">
+        <a href="file:///C:/Users/Andres/Downloads/index_18.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)">
           Get My Free Quote
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
         </a>
@@ -521,13 +525,13 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <!-- SERVICES -->
 <section class="section" id="services">
   <div class="si">
-    <div class="section-header reveal">
+    <div class="section-header reveal vis">
       <div class="section-label"><div class="label-line"></div><span>What We Cover</span></div>
       <h2 class="section-title">Complete Florida<br><em>Coverage</em></h2>
       <p class="section-sub">From beachfront condos to inland commercial properties — we place coverage others can't.</p>
     </div>
     <div class="bento">
-      <div class="bento-card featured span-8" style="transition-delay:0s">
+      <div class="bento-card featured span-8 vis" style="transition-delay:0s">
         <div class="bento-icon">🏠</div>
         <div class="bento-tag">Most Popular</div>
         <div class="bento-h">Homeowners Insurance</div>
@@ -535,35 +539,35 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
         <div class="bento-arrow">→</div>
         <div class="bento-big-num">01</div>
       </div>
-      <div class="bento-card teal span-4" style="transition-delay:0.05s">
+      <div class="bento-card teal span-4 vis" style="transition-delay:0.05s">
         <div class="bento-icon">🌊</div>
         <div class="bento-tag">Flood</div>
         <div class="bento-h">Flood Insurance</div>
         <p class="bento-p">NFIP and private flood. We compare rates for your zone — often saving thousands.</p>
         <div class="bento-arrow">→</div>
       </div>
-      <div class="bento-card span-4" style="transition-delay:0.1s">
+      <div class="bento-card span-4 vis" style="transition-delay:0.1s">
         <div class="bento-icon">🌀</div>
         <div class="bento-tag">Wind</div>
         <div class="bento-h">Wind &amp; Hurricane</div>
         <p class="bento-p">Dedicated wind-only policies, wind mitigation credits, coastal specialists.</p>
         <div class="bento-arrow">→</div>
       </div>
-      <div class="bento-card span-4" style="transition-delay:0.15s">
+      <div class="bento-card span-4 vis" style="transition-delay:0.15s">
         <div class="bento-icon">🏢</div>
         <div class="bento-tag">Business</div>
         <div class="bento-h">Commercial Insurance</div>
         <p class="bento-p">BOP, general liability, commercial property, workers' comp for FL businesses.</p>
         <div class="bento-arrow">→</div>
       </div>
-      <div class="bento-card gold span-4" style="transition-delay:0.2s">
+      <div class="bento-card gold span-4 vis" style="transition-delay:0.2s">
         <div class="bento-icon">🏗️</div>
         <div class="bento-tag">Investment</div>
         <div class="bento-h">Landlord &amp; Rental</div>
         <p class="bento-p">DP-1, DP-3, landlord liability for investment properties and vacation rentals.</p>
         <div class="bento-arrow">→</div>
       </div>
-      <div class="bento-card span-4" style="transition-delay:0.25s">
+      <div class="bento-card span-4 vis" style="transition-delay:0.25s">
         <div class="bento-icon">🏖️</div>
         <div class="bento-tag">Condo</div>
         <div class="bento-h">Condo HO-6</div>
@@ -577,35 +581,35 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <!-- WHY US -->
 <section class="section" id="why">
   <div class="si">
-    <div class="section-header reveal">
+    <div class="section-header reveal vis">
       <div class="section-label"><div class="label-line"></div><span>Why FL Coastal</span></div>
       <h2 class="section-title">The Independent<br><em>Advantage</em></h2>
       <p class="section-sub">Unlike captive agents locked to one company, we shop 30+ carriers — creating real competition for your business.</p>
     </div>
     <div class="why-grid">
-      <div class="why-item">
+      <div class="why-item vis">
         <div class="why-num">01</div>
         <div class="why-h">30+ Carriers, One Call</div>
         <p class="why-p">We compare quotes from 30+ top-rated Florida carriers simultaneously — the best rate without the runaround.</p>
       </div>
-      <div class="why-item">
+      <div class="why-item vis">
         <div class="why-num">02</div>
         <div class="why-h">Coastal Specialists</div>
         <p class="why-p">Wind mitigation credits, Citizens alternatives, flood zones — we navigate Florida's complex market daily.</p>
       </div>
-      <div class="why-item">
+      <div class="why-item vis">
         <div class="why-num">03</div>
         <div class="why-h">Fast &amp; No Pressure</div>
         <p class="why-p">Real quotes fast. Honest recommendations. Zero pressure to buy. Your timeline, your decision, always.</p>
       </div>
-      <div class="why-item">
+      <div class="why-item vis">
         <div class="why-num">04</div>
         <div class="why-h">Licensed Independent</div>
         <p class="why-p">Fully licensed Florida insurance agency. We work for you — not the carriers — 100% of the time.</p>
       </div>
     </div>
 
-    <div class="why-partner reveal">
+    <div class="why-partner reveal vis">
       <div>
         <div class="section-label" style="margin-bottom:0.75rem"><div class="label-line" style="background:var(--gold2)"></div><span style="color:rgba(245,243,239,0.4)">For Professionals</span></div>
         <div class="why-partner-h">Realtors &amp; Mortgage Officers</div>
@@ -614,15 +618,15 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       </div>
       <div class="why-partner-nums">
         <div class="wpn">
-          <div class="wpn-n" data-target="30" data-suffix="+">0+</div>
+          <div class="wpn-n" data-target="30" data-suffix="+">30+</div>
           <div class="wpn-l">Carrier Relationships</div>
         </div>
         <div class="wpn">
-          <div class="wpn-n" data-target="66" data-suffix="">0</div>
+          <div class="wpn-n" data-target="66" data-suffix="">66</div>
           <div class="wpn-l">Counties Covered</div>
         </div>
         <div class="wpn">
-          <div class="wpn-n" data-target="100" data-suffix="%">0%</div>
+          <div class="wpn-n" data-target="100" data-suffix="%">100%</div>
           <div class="wpn-l">Independent</div>
         </div>
       </div>
@@ -633,24 +637,24 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <!-- PROCESS -->
 <section class="section" id="process">
   <div class="si">
-    <div class="section-header reveal">
+    <div class="section-header reveal vis">
       <div class="section-label"><div class="label-line"></div><span>How It Works</span></div>
       <h2 class="section-title">Covered in<br><em>3 Steps</em></h2>
     </div>
     <div class="process-steps">
-      <div class="pstep" style="transition-delay:0s">
+      <div class="pstep vis" style="transition-delay:0s">
         <div class="pstep-n">01</div>
         <h4>Tell Us What You Need</h4>
         <p>Fill out our simple form or call us. Takes under 2 minutes. No jargon, no pressure.</p>
         <div class="pstep-connector">→</div>
       </div>
-      <div class="pstep" style="transition-delay:0.1s">
+      <div class="pstep vis" style="transition-delay:0.1s">
         <div class="pstep-n">02</div>
         <h4>We Shop 30+ Carriers</h4>
         <p>We compare every carrier simultaneously on your behalf. Full market access, one call.</p>
         <div class="pstep-connector">→</div>
       </div>
-      <div class="pstep" style="transition-delay:0.2s">
+      <div class="pstep vis" style="transition-delay:0.2s">
         <div class="pstep-n">03</div>
         <h4>You Pick, We Bind</h4>
         <p>Choose the best option. We handle all the paperwork and deliver your policy fast.</p>
@@ -664,29 +668,29 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
   <div class="si">
     <div class="cov-layout">
       <div>
-        <div class="section-header reveal">
+        <div class="section-header reveal vis">
           <div class="section-label"><div class="label-line"></div><span>Service Area</span></div>
           <h2 class="section-title">Serving All<br>of <em>Florida</em></h2>
           <p class="section-sub">Licensed in 66 of 67 Florida counties — from Pensacola to Key West.</p>
         </div>
-        <div class="county-search-wrap reveal">
+        <div class="county-search-wrap reveal vis">
           <span class="county-search-icon">🔍</span>
           <input type="text" class="county-search" id="csearch" placeholder="Search a county..." oninput="filterCounties(this.value)">
         </div>
-        <div class="counties-box reveal">
-          <div class="counties-flow" id="cflow"><span class="cpill" data-c="alachua">Alachua</span><span class="cpill" data-c="baker">Baker</span><span class="cpill" data-c="bay">Bay</span><span class="cpill" data-c="bradford">Bradford</span><span class="cpill" data-c="brevard">Brevard</span><span class="cpill" data-c="broward">Broward</span><span class="cpill" data-c="calhoun">Calhoun</span><span class="cpill" data-c="charlotte">Charlotte</span><span class="cpill" data-c="citrus">Citrus</span><span class="cpill" data-c="clay">Clay</span><span class="cpill" data-c="collier">Collier</span><span class="cpill" data-c="columbia">Columbia</span><span class="cpill" data-c="desoto">DeSoto</span><span class="cpill" data-c="dixie">Dixie</span><span class="cpill" data-c="duval">Duval</span><span class="cpill" data-c="escambia">Escambia</span><span class="cpill" data-c="flagler">Flagler</span><span class="cpill" data-c="franklin">Franklin</span><span class="cpill" data-c="gadsden">Gadsden</span><span class="cpill" data-c="gilchrist">Gilchrist</span><span class="cpill" data-c="glades">Glades</span><span class="cpill" data-c="gulf">Gulf</span><span class="cpill" data-c="hamilton">Hamilton</span><span class="cpill" data-c="hardee">Hardee</span><span class="cpill" data-c="hendry">Hendry</span><span class="cpill" data-c="hernando">Hernando</span><span class="cpill" data-c="highlands">Highlands</span><span class="cpill" data-c="hillsborough">Hillsborough</span><span class="cpill" data-c="holmes">Holmes</span><span class="cpill" data-c="indian river">Indian River</span><span class="cpill" data-c="jackson">Jackson</span><span class="cpill" data-c="jefferson">Jefferson</span><span class="cpill" data-c="lafayette">Lafayette</span><span class="cpill" data-c="lake">Lake</span><span class="cpill" data-c="lee">Lee</span><span class="cpill" data-c="leon">Leon</span><span class="cpill" data-c="levy">Levy</span><span class="cpill" data-c="liberty">Liberty</span><span class="cpill" data-c="madison">Madison</span><span class="cpill" data-c="marion">Marion</span><span class="cpill" data-c="martin">Martin</span><span class="cpill" data-c="miami-dade">Miami-Dade</span><span class="cpill" data-c="monroe">Monroe</span><span class="cpill" data-c="nassau">Nassau</span><span class="cpill" data-c="okaloosa">Okaloosa</span><span class="cpill" data-c="okeechobee">Okeechobee</span><span class="cpill" data-c="orange">Orange</span><span class="cpill" data-c="osceola">Osceola</span><span class="cpill" data-c="palm beach">Palm Beach</span><span class="cpill" data-c="pasco">Pasco</span><span class="cpill" data-c="pinellas">Pinellas</span><span class="cpill" data-c="polk">Polk</span><span class="cpill" data-c="putnam">Putnam</span><span class="cpill" data-c="st. johns">St. Johns</span><span class="cpill" data-c="st. lucie">St. Lucie</span><span class="cpill" data-c="santa rosa">Santa Rosa</span><span class="cpill" data-c="sarasota">Sarasota</span><span class="cpill" data-c="seminole">Seminole</span><span class="cpill" data-c="sumter">Sumter</span><span class="cpill" data-c="suwannee">Suwannee</span><span class="cpill" data-c="taylor">Taylor</span><span class="cpill" data-c="union">Union</span><span class="cpill" data-c="volusia">Volusia</span><span class="cpill" data-c="wakulla">Wakulla</span><span class="cpill" data-c="walton">Walton</span><span class="cpill" data-c="washington">Washington</span></div>
+        <div class="counties-box reveal vis">
+          <div class="counties-flow" id="cflow"></div>
         </div>
-        <div class="excl-box reveal" style="margin-top:0.85rem">
+        <div class="excl-box reveal vis" style="margin-top:0.85rem">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
           <div><div class="excl-lbl">Not Currently Served</div><div style="font-size:0.82rem;color:var(--muted)">Manatee County</div></div>
         </div>
-        <a href="file:///C:/Users/Andres/Downloads/index_17.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)" style="margin-top:2rem;display:inline-flex">
+        <a href="file:///C:/Users/Andres/Downloads/index_18.html#quote" class="btn-primary" onclick="navGo(&#39;#quote&#39;)" style="margin-top:2rem;display:inline-flex">
           Check My Area
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
         </a>
       </div>
       <div>
-        <div class="coverage-card reveal">
+        <div class="coverage-card reveal vis">
           <div class="coverage-card-header">
             <div class="section-label" style="margin-bottom:0.5rem"><div class="label-line" style="background:var(--gold2)"></div><span style="color:rgba(245,243,239,0.4)">Coverage by Region</span></div>
             <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.3rem;font-weight:700;color:var(--cream)">66 of 67 Florida Counties</div>
@@ -711,32 +715,32 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
   <div class="si">
     <div class="quote-layout">
       <div class="quote-info">
-        <div class="section-header reveal">
+        <div class="section-header reveal vis">
           <div class="section-label"><div class="label-line"></div><span>Get Started</span></div>
           <h2 class="section-title">Get Your<br><em>Free Quote</em></h2>
           <p class="section-sub">Takes under 2 minutes. No obligation, no spam. Just honest options from 30+ carriers.</p>
         </div>
         <div class="quote-trust">
-          <div class="qt reveal" style="transition-delay:0.05s">
+          <div class="qt reveal vis" style="transition-delay:0.05s">
             <div class="qt-icon">⚡</div>
             <div><div class="qt-h">Same-Day Quotes</div><div class="qt-p">Most quotes returned same business day. Rush available for closing deadlines.</div></div>
           </div>
-          <div class="qt reveal" style="transition-delay:0.1s">
+          <div class="qt reveal vis" style="transition-delay:0.1s">
             <div class="qt-icon">🔒</div>
             <div><div class="qt-h">No Obligation</div><div class="qt-p">We'll send your options and let you decide. Zero pressure, ever.</div></div>
           </div>
-          <div class="qt reveal" style="transition-delay:0.15s">
+          <div class="qt reveal vis" style="transition-delay:0.15s">
             <div class="qt-icon">🏆</div>
             <div><div class="qt-h">Licensed &amp; Independent</div><div class="qt-p">Florida-licensed agency working exclusively for you — not the carriers.</div></div>
           </div>
-          <div class="qt reveal" style="transition-delay:0.2s">
+          <div class="qt reveal vis" style="transition-delay:0.2s">
             <div class="qt-icon">📋</div>
             <div><div class="qt-h">Priority for Inspections</div><div class="qt-p">Upload a 4-point or wind mitigation report and get bumped to the front of the line.</div></div>
           </div>
         </div>
       </div>
 
-      <div class="quote-form-wrap reveal">
+      <div class="quote-form-wrap reveal vis">
         <form id="qForm" action="https://formspree.io/f/mzdjpdjn" method="POST" enctype="multipart/form-data">
           <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.4rem;font-weight:700;margin-bottom:1.75rem;color:var(--text)">Request a Quote</div>
           <div class="frow">
@@ -797,16 +801,16 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <!-- REVIEWS -->
 <section class="section" id="testimonials">
   <div class="si">
-    <div class="section-header reveal">
+    <div class="section-header reveal vis">
       <div class="section-label"><div class="label-line"></div><span>Client Reviews</span></div>
       <h2 class="section-title">What Our<br><em>Clients Say</em></h2>
     </div>
-    <div class="review-placeholder reveal">
+    <div class="review-placeholder reveal vis">
       <div class="review-placeholder-icon">⭐</div>
       <p>We're just getting started — and we'd love to hear from you.<br>Be the first to share your experience with FL Coastal Insurance.</p>
-      <a href="file:///C:/Users/Andres/Downloads/index_17.html#leave-review" onclick="document.getElementById(&#39;review-form-card&#39;).scrollIntoView({behavior:&#39;smooth&#39;});return false;" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-family:&#39;Syne&#39;,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none">Leave a Review →</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_18.html#leave-review" onclick="document.getElementById(&#39;review-form-card&#39;).scrollIntoView({behavior:&#39;smooth&#39;});return false;" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1.25rem;font-family:&#39;Syne&#39;,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none">Leave a Review →</a>
     </div>
-    <div class="review-form-card reveal" id="review-form-card">
+    <div class="review-form-card reveal vis" id="review-form-card">
       <div style="text-align:center;margin-bottom:1.75rem">
         <div class="section-label" style="justify-content:center;margin-bottom:0.6rem"><div class="label-line"></div><span>Share Your Experience</span></div>
         <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.5rem;font-weight:700;color:var(--text)">Leave a Review</div>
@@ -839,15 +843,15 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
   <div class="si">
     <div class="faq-layout">
       <div class="faq-sticky">
-        <div class="section-label reveal"><div class="label-line"></div><span>Common Questions</span></div>
-        <h2 class="section-title reveal" style="margin-bottom:1.5rem">Florida Insurance<br><em>FAQs</em></h2>
-        <p class="section-sub reveal" style="font-size:0.9rem">Can't find what you're looking for? Call us directly.</p>
+        <div class="section-label reveal hidden-before-reveal"><div class="label-line"></div><span>Common Questions</span></div>
+        <h2 class="section-title reveal hidden-before-reveal" style="margin-bottom:1.5rem">Florida Insurance<br><em>FAQs</em></h2>
+        <p class="section-sub reveal hidden-before-reveal" style="font-size:0.9rem">Can't find what you're looking for? Call us directly.</p>
         <a href="tel:+17542851953" class="btn-primary" onclick="" style="margin-top:1.75rem;display:inline-flex">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
           (754) 285-1953
         </a>
       </div>
-      <div class="faq-wrap reveal">
+      <div class="faq-wrap reveal hidden-before-reveal">
         <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What does it mean to be an independent agent?<div class="faq-tog">+</div></div><div class="faq-a">An independent agent isn't locked to a single insurance company. We work with 30+ carriers and shop your policy to all of them simultaneously. That competition drives your price down — unlike a captive agent who can only offer one company's rates.</div></div>
         <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is Florida coastal / windstorm insurance hard to find?<div class="faq-tog">+</div></div><div class="faq-a">It can be — many national carriers have pulled back from Florida's coastal market. But we specialize exactly here. We have carrier relationships for high-wind zones, coastal properties, and difficult-to-insure homes that other agents struggle to place.</div></div>
         <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How fast can I get a quote?<div class="faq-tog">+</div></div><div class="faq-a">Most standard quotes come back same business day. For complex commercial or coastal properties, usually within 24-48 hours. If you have a closing deadline, tell us upfront — we can accommodate rush requests. Uploading a 4-point or wind mitigation report bumps you to priority.</div></div>
@@ -863,7 +867,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <div id="cta-band">
   <h2>Ready to Stop Overpaying?</h2>
   <p>Join Florida homeowners and businesses who let us do the shopping.</p>
-  <a href="file:///C:/Users/Andres/Downloads/index_17.html#quote" class="btn-dark" onclick="navGo(&#39;#quote&#39;)">
+  <a href="file:///C:/Users/Andres/Downloads/index_18.html#quote" class="btn-dark" onclick="navGo(&#39;#quote&#39;)">
     Get My Free Quote — Takes 2 Minutes
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
   </a>
@@ -873,7 +877,7 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
 <footer>
   <div class="fgrid">
     <div class="fbrand">
-      <a href="file:///C:/Users/Andres/Downloads/index_17.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
+      <a href="file:///C:/Users/Andres/Downloads/index_18.html#" class="nav-logo" onclick="navGo(&#39;#hero&#39;)">
         <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v5c0 5.25 3.5 10.15 8 11.5C16.5 22.15 20 17.25 20 12V7L12 2z"></path></svg></div>
         <div><div class="logo-name" style="color:rgba(245,243,239,0.85)">FL Coastal Insurance</div><div class="logo-sub">Independent Agency · LLC</div></div>
       </a>
@@ -882,21 +886,21 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
     <div class="fcol">
       <h4>Coverage</h4>
       <ul>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)">Homeowners</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)">Flood Insurance</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)">Wind / Hurricane</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)">Commercial</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)">Rental Property</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#services" onclick="navGo(&#39;#services&#39;)">Condo / HO-6</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)">Homeowners</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)">Flood Insurance</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)">Wind / Hurricane</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)">Commercial</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)">Rental Property</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#services" onclick="navGo(&#39;#services&#39;)">Condo / HO-6</a></li>
       </ul>
     </div>
     <div class="fcol">
       <h4>Company</h4>
       <ul>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#why" onclick="navGo(&#39;#why&#39;)">About Us</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#quote" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#why" onclick="navGo(&#39;#why&#39;)">About Us</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#coverage" onclick="navGo(&#39;#coverage&#39;)">Service Area</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#faq" onclick="navGo(&#39;#faq&#39;)">FAQ</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#quote" onclick="navGo(&#39;#quote&#39;)">Get a Quote</a></li>
         <li><a href="file:///C:/cdn-cgi/l/email-protection#1776797365726457676578637274637e6172747f787e74723974787a" class="alink">Contact</a></li>
       </ul>
     </div>
@@ -905,16 +909,16 @@ footer{background:var(--ink);padding:4rem 2.5rem 2rem}
       <ul>
         <li><a href="tel:+17542851953" class="alink">📞 (754) 285-1953</a></li>
         <li><a href="file:///C:/cdn-cgi/l/email-protection#10717e746275635060627f6475736479667573787f7973753e737f7d" class="alink">✉️ Quotes Email</a></li>
-        <li><a href="file:///C:/Users/Andres/Downloads/index_17.html#coverage" onclick="navGo(&#39;#coverage&#39;)">📍 All FL except Manatee</a></li>
+        <li><a href="file:///C:/Users/Andres/Downloads/index_18.html#coverage" onclick="navGo(&#39;#coverage&#39;)">📍 All FL except Manatee</a></li>
       </ul>
     </div>
   </div>
   <div class="fbot">
     <p>© 2025 FL Coastal Insurance LLC. All rights reserved. Licensed Florida Insurance Agency.</p>
     <div class="fbot-links">
-      <a href="file:///C:/Users/Andres/Downloads/index_17.html#">Privacy Policy</a>
-      <a href="file:///C:/Users/Andres/Downloads/index_17.html#">Terms</a>
-      <a href="file:///C:/Users/Andres/Downloads/index_17.html#">License Info</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_18.html#">Privacy Policy</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_18.html#">Terms</a>
+      <a href="file:///C:/Users/Andres/Downloads/index_18.html#">License Info</a>
     </div>
   </div>
 </footer>
@@ -1012,43 +1016,59 @@ function mobNav(t){
 })();
 
 // ── SCROLL REVEALS ────────────────────────────────────────────────────
-const revealObs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting) return;
-    e.target.classList.add('vis');
-    revealObs.unobserve(e.target);
+// Step 1: Only hide elements AFTER DOM is confirmed ready
+// This prevents the "invisible forever" bug on prod
+document.addEventListener('DOMContentLoaded', function() {
+  // Add hidden class now that DOM is ready — safe to hide
+  document.querySelectorAll('.reveal,.bento-card,.why-item,.pstep').forEach(el => {
+    el.classList.add('hidden-before-reveal');
   });
-},{threshold:0.08});
-document.querySelectorAll('.reveal,.why-item,.pstep').forEach(el=>revealObs.observe(el));
 
-// Bento cards stagger on scroll
-const bentoObs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting) return;
-    const cards = e.target.querySelectorAll('.bento-card');
-    cards.forEach((c,i)=>{ setTimeout(()=>c.classList.add('vis'), i*60); });
-    bentoObs.unobserve(e.target);
-  });
-},{threshold:0.05});
-const bentoGrid = document.querySelector('.bento');
-if(bentoGrid) bentoObs.observe(bentoGrid);
+  // Step 2: Observe and reveal on scroll
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.remove('hidden-before-reveal');
+      e.target.classList.add('vis');
+      obs.unobserve(e.target);
+    });
+  }, {threshold: 0.08, rootMargin: '0px 0px -40px 0px'});
 
-// ── COUNTERS ──────────────────────────────────────────────────────────
-const counterObs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting) return;
-    const el=e.target, target=+el.dataset.target, suffix=el.dataset.suffix||'';
-    const dur=1800, start=performance.now();
-    const tick=now=>{
-      const p=Math.min((now-start)/dur,1);
-      el.textContent=Math.round((1-Math.pow(1-p,3))*target)+suffix;
-      if(p<1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-    counterObs.unobserve(el);
-  });
-},{threshold:0.5});
-document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+  document.querySelectorAll('.reveal,.why-item,.pstep').forEach(el => obs.observe(el));
+
+  // Bento cards stagger
+  const bentoObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.bento-card').forEach((c, i) => {
+        setTimeout(() => {
+          c.classList.remove('hidden-before-reveal');
+          c.classList.add('vis');
+        }, i * 70);
+      });
+      bentoObs.unobserve(e.target);
+    });
+  }, {threshold: 0.05});
+  const bentoGrid = document.querySelector('.bento');
+  if (bentoGrid) bentoObs.observe(bentoGrid);
+
+  // Counters
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.target, suffix = el.dataset.suffix || '';
+      const dur = 1800, start = performance.now();
+      const tick = now => {
+        const p = Math.min((now - start) / dur, 1);
+        el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterObs.unobserve(el);
+    });
+  }, {threshold: 0.5});
+  document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+});
 
 // ── MARQUEE ───────────────────────────────────────────────────────────
 (function(){
@@ -1057,10 +1077,7 @@ document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
   document.getElementById('marqueeTrack').innerHTML=all.map(t=>`<div class="marquee-item"><span>${t}</span><div class="marquee-dot"></div></div>`).join('');
 })();
 
-// ── SCROLL REVEAL FALLBACK ────────────────────────────────────────────
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('vis','in-view');ro.unobserve(e.target);} });
-},{threshold:0.1});
+
 document.querySelectorAll('.reveal,.bento-card,.why-item,.pstep').forEach(el=>ro.observe(el));
 
 // ── FAQ ───────────────────────────────────────────────────────────────
